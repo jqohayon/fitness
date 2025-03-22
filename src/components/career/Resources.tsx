@@ -1,25 +1,17 @@
 import React from 'react';
 import '../GoogleDocViewer.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBookOpen } from '@fortawesome/free-solid-svg-icons';
+import { FaBook } from 'react-icons/fa';
 
 const Resources: React.FC = () => {
   return (
     <div className="doc-container">
       <h2>Additional Resources</h2>
       <div style={{ textAlign: 'center', marginTop: '-15px', marginBottom: '15px' }}>
-        <FontAwesomeIcon 
-          icon={faBookOpen} 
+        <FaBook
           style={{ 
             fontSize: '2rem',
             color: '#6a1b9a',
             transition: 'all 0.3s ease'
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.transform = 'scale(1.1)';
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.transform = 'scale(1)';
           }}
         />
         <p style={{
@@ -28,48 +20,44 @@ const Resources: React.FC = () => {
           marginTop: '8px',
           marginBottom: '0',
           fontStyle: 'italic'
-        }}>Knowledge is power.</p>
+        }}>Expand your wellness knowledge.</p>
       </div>
       <div className="content-section">
+        <div className="emphasis-box">
+          <h4 style={{ fontSize: '1.3rem' }}>Recommended Reading</h4>
+          <ul>
+            <li><strong>Strength Training:</strong> "Starting Strength" by Mark Rippetoe - Comprehensive guide to proper form and progression.</li>
+            <li><strong>Nutrition:</strong> "The Renaissance Diet 2.0" by Dr. Mike Israetel - Science-based approach to nutrition.</li>
+            <li><strong>Recovery:</strong> "Good to Go" by Christie Aschwanden - Latest science on rest and recovery.</li>
+            <li><strong>Mindset:</strong> "The Champion's Mind" by Jim Afremow - Mental strategies for peak performance.</li>
+          </ul>
+        </div>
+
         <section className="tools-section">
           <div className="tool-category">
-            <h4 style={{ fontSize: '1.3rem' }}>Reading Materials</h4>
-            <ul>
-              <li style={{ fontSize: '1.1rem' }}>
-                <strong>David Farley</strong> - Modern Software Engineering
-                <ul>
-                  <li style={{ padding: '4px 0 4px 50px', position: 'relative', fontSize: '1.1rem' }}>
-                    <span style={{ position: 'absolute', left: '15px', top: '50%', transform: 'translateY(-50%)', fontSize: '20px', opacity: '0.7' }}>☁️</span>
-                    A foundational read that taught me golden standards, mindset development, and pracitcal approaches.
-                  </li>
-                </ul>
-              </li>
-              <li style={{ fontSize: '1.1rem' }}>
-                <strong>Martin Fowler's Works</strong>
-                <ul>
-                  <li style={{ fontSize: '1.1rem' }}>Refactoring</li>
-                  <li style={{ fontSize: '1.1rem' }}>The Practical Test Pyramid</li>
-                </ul>
-              </li>
-              <li style={{ fontSize: '1.1rem' }}>
-                <strong>Robert Martin's Series</strong>
-                <ul>
-                  <li style={{ fontSize: '1.1rem' }}>The Clean Coder</li>
-                  <li style={{ fontSize: '1.1rem' }}>Clean Code</li>
-                </ul>
-              </li>
-              <li style={{ fontSize: '1.1rem' }}>
-                <strong>Vlad Knononov</strong> - Learning Domain-Driven Design
-                <ul>
-                  <li style={{ padding: '4px 0 4px 50px', position: 'relative', fontSize: '1.1rem' }}>
-                    <span style={{ position: 'absolute', left: '15px', top: '50%', transform: 'translateY(-50%)', fontSize: '20px', opacity: '0.7' }}>☁️</span>
-                    Current reading to understand the deeper concepts & importance of DDD.
-                  </li>
-                </ul>
-              </li>
-            </ul>
+            <h4 style={{ fontSize: '1.3rem' }}>Online Resources</h4>
+            <div style={{ color: '#9d6be7', fontSize: '1.1em', display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+              <span>Examine.com</span>
+              <span>MyFitnessPal</span>
+              <span>StrongLifts</span>
+              <span>Headspace</span>
+              <span>Nike Run Club</span>
+              <span>JEFIT</span>
+              <span>Strava</span>
+              <span>Calm</span>
+            </div>
           </div>
         </section>
+
+        <div className="emphasis-box">
+          <h4 style={{ fontSize: '1.3rem' }}>Community & Support</h4>
+          <ul>
+            <li><strong>Reddit Communities:</strong> r/fitness, r/nutrition, r/bodyweightfitness</li>
+            <li><strong>YouTube Channels:</strong> AthleanX, Jeff Nippard, Mind Pump</li>
+            <li><strong>Podcasts:</strong> Mind Pump, Huberman Lab, Found My Fitness</li>
+            <li><strong>Local Resources:</strong> Gyms, nutrition coaches, wellness centers</li>
+          </ul>
+        </div>
       </div>
     </div>
   );
