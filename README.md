@@ -1,12 +1,13 @@
-# Jacqstack Frontend
+# Fitness Frontend
 
-This is the frontend for the Jacqstack project, a personal website documenting my journey transitioning from a non-technical background to becoming a software engineer.
+This is the frontend for the Fitness project, a personal website focused on tracking fitness progress, providing workout guidance, and offering nutritional information.
 
 ## Features
 
-- React-based frontend
-- Responsive design
-- Deployed on GitHub Pages
+- Strength Training
+- Cardio Programs
+- Nutrition Guide
+- Wellness Tracking
 
 ## Development
 
@@ -22,6 +23,6 @@ npm run dev
 
 ## Deployment
 
-The project is automatically deployed to GitHub Pages when changes are pushed to the `stable-version` branch.
+The project is automatically deployed to GitHub Pages when changes are pushed to the `main` branch.
 
-Visit the live site at: https://jqohayon.github.io/jacqstack/
+Visit the live site at: https://jqohayon.github.io/fitness/
