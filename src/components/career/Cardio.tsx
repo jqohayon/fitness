@@ -1,52 +1,53 @@
 import React from 'react';
-import { FaHeartbeat, FaRunning, FaBiking, FaSwimmer } from 'react-icons/fa';
+import '../GoogleDocViewer.css';
+import { FaRunning } from 'react-icons/fa';
 
 const Cardio: React.FC = () => {
   return (
-    <div className="content-section">
-      <h2 className="title">Cardiovascular Training</h2>
-      <div className="intro-text">
-        Explore different types of cardio exercises and build endurance for a healthier lifestyle.
+    <div className="doc-container">
+      <h2>Cardio Training</h2>
+      <div style={{ textAlign: 'center', marginTop: '-15px', marginBottom: '15px' }}>
+        <FaRunning 
+          style={{ 
+            fontSize: '2rem',
+            color: '#6a1b9a',
+            transition: 'all 0.3s ease'
+          }}
+        />
+        <p style={{
+          color: '#ffffff',
+          fontSize: '1.2rem',
+          marginTop: '8px',
+          marginBottom: '0',
+          fontStyle: 'italic'
+        }}>Elevate your endurance and heart health.</p>
       </div>
+      <div className="content-section">
+        <div className="emphasis-box">
+          <h4 style={{ fontSize: '1.3rem' }}>Training Benefits</h4>
+          <ul>
+            <li><strong>Endurance:</strong> Build stamina and cardiovascular fitness.</li>
+            <li><strong>Heart Health:</strong> Improve cardiovascular function and efficiency.</li>
+            <li><strong>Fat Loss:</strong> Optimize calorie burn and metabolism.</li>
+            <li><strong>Recovery:</strong> Active recovery and conditioning techniques.</li>
+          </ul>
+        </div>
 
-      <div className="emphasis-box">
-        <h4><FaHeartbeat className="section-icon" /> Benefits of Cardio</h4>
-        <ul>
-          <li>Improved Heart Health</li>
-          <li>Better Endurance</li>
-          <li>Weight Management</li>
-          <li>Stress Reduction</li>
-        </ul>
-      </div>
-
-      <div className="emphasis-box">
-        <h4><FaRunning className="section-icon" /> Running Programs</h4>
-        <ul>
-          <li>Couch to 5K</li>
-          <li>Interval Training</li>
-          <li>Distance Running</li>
-          <li>Sprint Training</li>
-        </ul>
-      </div>
-
-      <div className="emphasis-box">
-        <h4><FaBiking className="section-icon" /> Cycling Workouts</h4>
-        <ul>
-          <li>Indoor Cycling</li>
-          <li>Road Biking</li>
-          <li>Mountain Biking</li>
-          <li>HIIT Cycling</li>
-        </ul>
-      </div>
-
-      <div className="emphasis-box">
-        <h4><FaSwimmer className="section-icon" /> Swimming</h4>
-        <ul>
-          <li>Stroke Techniques</li>
-          <li>Pool Workouts</li>
-          <li>Open Water Swimming</li>
-          <li>Recovery Swims</li>
-        </ul>
+        <section className="tools-section">
+          <div className="tool-category">
+            <h4 style={{ fontSize: '1.3rem' }}>Training Methods</h4>
+            <div style={{ color: '#9d6be7', fontSize: '1.1em', display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+              <span>HIIT</span>
+              <span>Running</span>
+              <span>Cycling</span>
+              <span>Swimming</span>
+              <span>Jump Rope</span>
+              <span>Rowing</span>
+              <span>Stairs</span>
+              <span>Boxing</span>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );
