@@ -37,14 +37,7 @@ const Resources: React.FC = () => {
           <div className="tool-category">
             <h4 style={{ fontSize: '1.3rem' }}>Online Resources</h4>
             <div style={{ color: '#9d6be7', fontSize: '1.1em', display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <span>Examine.com</span>
               <span>MyFitnessPal</span>
-              <span>StrongLifts</span>
-              <span>Headspace</span>
-              <span>Nike Run Club</span>
-              <span>JEFIT</span>
-              <span>Strava</span>
-              <span>Calm</span>
             </div>
           </div>
         </section>
@@ -53,8 +46,8 @@ const Resources: React.FC = () => {
           <h4 style={{ fontSize: '1.3rem' }}>Community & Support</h4>
           <ul>
             <li><strong>Reddit Communities:</strong> r/fitness, r/nutrition, r/bodyweightfitness</li>
-            <li><strong>YouTube Channels:</strong> AthleanX, Jeff Nippard, Mind Pump</li>
-            <li><strong>Podcasts:</strong> Mind Pump, Huberman Lab, Found My Fitness</li>
+            <li><strong>YouTube Channels:</strong> AthleanX</li>
+            <li><strong>Podcasts:</strong> Yvonne Burkart, Renaissance Periodization</li>
             <li><strong>Local Resources:</strong> Gyms, nutrition coaches, wellness centers</li>
           </ul>
         </div>
