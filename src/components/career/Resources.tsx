@@ -47,7 +47,7 @@ const Resources: React.FC = () => {
           <ul>
             <li><strong>Reddit Communities:</strong> r/fitness, r/nutrition, r/bodyweightfitness</li>
             <li><strong>YouTube Channels:</strong> AthleanX</li>
-            <li><strong>Podcasts:</strong> Yvonne Burkart, <a href="https://www.youtube.com/@RenaissancePeriodization" target="_blank" rel="noopener noreferrer" style={{ color: '#9d6be7', textDecoration: 'none', fontWeight: 'bold' }}>Renaissance Periodization</a></li>
+            <li><strong>Podcasts:</strong> <a href="https://www.youtube.com/results?search_query=Yvonne+Burkart" target="_blank" rel="noopener noreferrer" style={{ color: '#9d6be7', textDecoration: 'none', fontWeight: 'bold' }}>Yvonne Burkart</a>, <a href="https://www.youtube.com/@RenaissancePeriodization" target="_blank" rel="noopener noreferrer" style={{ color: '#9d6be7', textDecoration: 'none', fontWeight: 'bold' }}>Renaissance Periodization</a></li>
             <li><strong>Local Resources:</strong> Gyms, nutrition coaches, wellness centers</li>
           </ul>
         </div>
