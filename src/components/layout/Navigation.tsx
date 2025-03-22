@@ -10,6 +10,7 @@ type NavLinkClassNameProps = {
 const Navigation: React.FC = () => {
   return (
     <nav className="navigation">
+      {/* First Row - Main Categories */}
       <NavLink to="/" className={({ isActive }: NavLinkClassNameProps) => isActive ? 'nav-link active' : 'nav-link'} end>
         <FaHome size={24} />
       </NavLink>
@@ -22,6 +23,8 @@ const Navigation: React.FC = () => {
       <NavLink to="/nutrition" className={({ isActive }: NavLinkClassNameProps) => isActive ? 'nav-link active' : 'nav-link'}>
         Nutrition
       </NavLink>
+
+      {/* Second Row - Support Categories */}
       <NavLink to="/wellness" className={({ isActive }: NavLinkClassNameProps) => isActive ? 'nav-link active' : 'nav-link'}>
         Wellness
       </NavLink>
