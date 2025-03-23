@@ -41,10 +41,10 @@ const Wellness: React.FC = () => {
               <span>Ice Bath</span>
               <span>Breathing</span>
               <span>Yoga</span>
+              <span>Balance</span>
+              <span>Massage</span>
               <span>Recovery</span>
               <span>Sleep</span>
-              <span>Massage</span>
-              <span>Balance</span>
             </div>
           </div>
         </section>
