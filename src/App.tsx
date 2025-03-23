@@ -8,6 +8,7 @@ import Cardio from './components/career/Cardio';
 import Nutrition from './components/career/Nutrition';
 import Wellness from './components/career/Wellness';
 import Supplementation from './components/career/Supplementation';
+import Goals from './components/career/Goals';
 import SocialLinks from './components/SocialLinks';
 import './App.css';
 
@@ -30,6 +31,7 @@ const App: React.FC = () => {
           <Route path="/nutrition" element={<Nutrition />} />
           <Route path="/wellness" element={<Wellness />} />
           <Route path="/supplementation" element={<Supplementation />} />
+          <Route path="/goals" element={<Goals />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>

@@ -29,6 +29,9 @@ const Navigation: React.FC = () => {
       <NavLink to="/wellness" className={({ isActive }: NavLinkClassNameProps) => isActive ? 'nav-link active' : 'nav-link'}>
         Wellness
       </NavLink>
+      <NavLink to="/goals" className={({ isActive }: NavLinkClassNameProps) => isActive ? 'nav-link active' : 'nav-link'}>
+        Goals
+      </NavLink>
       <NavLink to="/supplementation" className={({ isActive }: NavLinkClassNameProps) => isActive ? 'nav-link active' : 'nav-link'}>
         Supplementation
       </NavLink>
