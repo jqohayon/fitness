@@ -36,7 +36,7 @@ const Strength: React.FC = () => {
 
         <section className="tools-section">
           <div className="tool-category">
-            <h4 style={{ fontSize: '1.3rem', color: '#E63946' }}>Key Exercises</h4>
+            <h4 style={{ fontSize: '1.3rem', color: '#E63946' }}>Training Methods</h4>
             <div style={{ 
               fontSize: '1.1em', 
               display: 'flex', 
