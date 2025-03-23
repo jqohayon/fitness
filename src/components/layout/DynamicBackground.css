@@ -5,14 +5,15 @@
   height: 100px;
   pointer-events: none;
   z-index: -1;
-  opacity: 0.6;
+  opacity: 0.8;
   filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.2));
 }
 
 /* Wellness Theme - Leaves */
 .leaf {
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%239B8EA9"><path d="M12 2L8 6H4l4 4-4 4h4l4 4 4-4h4l-4-4 4-4h-4z"/></svg>') no-repeat center center;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%237C9082"><path d="M12 2L8 6H4l4 4-4 4h4l4 4 4-4h4l-4-4 4-4h-4z"/></svg>') no-repeat center center;
   background-size: contain;
+  transform-origin: center;
 }
 
 /* Strength Theme - Equipment */
@@ -58,19 +59,31 @@
 }
 
 /* Element Positions and Animations */
-.leaf-1, .equipment-1, .wave-1, .cloud-1 { top: 15%; animation: float-right 40s linear infinite; }
-.leaf-2, .equipment-2, .wave-2, .cloud-2 { top: 45%; animation: float-right 45s linear infinite; transform: scale(1.2); }
-.leaf-3, .equipment-3, .wave-3, .cloud-3 { top: 70%; animation: float-right 35s linear infinite; transform: scale(0.8); }
-.leaf-4, .equipment-4, .wave-4, .cloud-4 { top: 30%; animation: float-left 40s linear infinite; transform: scale(1.1); }
-.leaf-5, .equipment-5, .wave-5, .cloud-5 { top: 55%; animation: float-left 35s linear infinite; transform: scale(0.9); }
-.leaf-6, .equipment-6, .wave-6, .cloud-6 { top: 80%; animation: float-left 50s linear infinite; transform: scale(1.3); }
+.leaf-1 { top: 15%; left: -150px; animation: float-right 35s linear infinite; transform: scale(0.8) rotate(15deg); }
+.leaf-2 { top: 45%; left: -150px; animation: float-right 45s linear infinite; transform: scale(1.2) rotate(-20deg); }
+.leaf-3 { top: 70%; left: -150px; animation: float-right 40s linear infinite; transform: scale(0.9) rotate(25deg); }
+.leaf-4 { top: 30%; right: -150px; animation: float-left 42s linear infinite; transform: scale(1.1) rotate(-15deg); }
+.leaf-5 { top: 55%; right: -150px; animation: float-left 38s linear infinite; transform: scale(0.7) rotate(30deg); }
+.leaf-6 { top: 80%; right: -150px; animation: float-left 48s linear infinite; transform: scale(1.3) rotate(-25deg); }
 
 @keyframes float-right {
-  from { left: -150px; }
-  to { left: 100%; }
+  from { 
+    left: -150px;
+    transform: translateY(0) rotate(0deg);
+  }
+  to { 
+    left: 100%;
+    transform: translateY(50px) rotate(360deg);
+  }
 }
 
 @keyframes float-left {
-  from { right: -150px; }
-  to { right: 100%; }
+  from { 
+    right: -150px;
+    transform: translateY(0) rotate(0deg);
+  }
+  to { 
+    right: 100%;
+    transform: translateY(-50px) rotate(-360deg);
+  }
 } 

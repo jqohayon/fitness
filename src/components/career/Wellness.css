@@ -1,0 +1,12 @@
+.wellness-focus-item {
+  transition: color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.wellness-focus-item:hover {
+  color: #7C9082;
+  transform: translateY(-2px);
+  background: rgba(124, 144, 130, 0.1);
+} 
