@@ -25,7 +25,7 @@ const Navigation: React.FC = () => {
       </NavLink>
 
       {/* Second Row - Wellness & Support */}
-      <div style={{ flexBasis: '100%', height: 0, margin: '-35px 0' }}></div>
+      <div style={{ flexBasis: '100%', height: 0, margin: '-45px 0' }}></div>
       <NavLink to="/wellness" className={({ isActive }: NavLinkClassNameProps) => isActive ? 'nav-link active' : 'nav-link'}>
         Wellness
       </NavLink>
