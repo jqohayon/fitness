@@ -37,7 +37,7 @@ const Wellness: React.FC = () => {
           <div className="tool-category">
             <h4 style={{ fontSize: '1.3rem' }}>Focus Areas</h4>
             <div style={{ color: '#9d6be7', fontSize: '1.1em', display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <div style={{ width: '100%', display: 'flex', justifyContent: 'center', gap: '1.5rem', marginBottom: '1rem' }}>
+              <div style={{ width: '100%', display: 'flex', justifyContent: 'center', gap: '1.5rem', marginBottom: '0.5rem' }}>
                 <span>Meditation</span>
                 <span>Ice Bath</span>
                 <span>Breathing</span>
