@@ -38,12 +38,12 @@ const Supplementation: React.FC = () => {
             <h4 style={{ fontSize: '1.3rem' }}>Key Supplements</h4>
             <div style={{ color: '#9d6be7', fontSize: '1.1em', display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <span>Protein</span>
-              <span>Creatine</span>
-              <span>BCAAs</span>
-              <span>Pre-Workout</span>
               <span>Vitamins</span>
               <span>Minerals</span>
               <span>Electrolytes</span>
+              <span>Creatine</span>
+              <span>BCAAs</span>
+              <span>Pre-Workout</span>
             </div>
           </div>
         </section>
