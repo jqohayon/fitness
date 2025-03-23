@@ -1,19 +1,31 @@
 import React from 'react';
 import { FaFlag } from 'react-icons/fa';
-import '../../styles/Goals.css';
+import '../GoogleDocViewer.css';
 
 const Goals: React.FC = () => {
   return (
-    <div className="goals-container">
-      <div className="goals-header">
-        <FaFlag className="goals-icon" />
-        <h1>Fitness Goals</h1>
-        <p>Transform your fitness aspirations into achievable milestones</p>
+    <div className="doc-container">
+      <h2>Fitness Goals</h2>
+      <div style={{ textAlign: 'center', marginTop: '-15px', marginBottom: '15px' }}>
+        <FaFlag 
+          style={{ 
+            fontSize: '2rem',
+            color: '#6a1b9a',
+            transition: 'all 0.3s ease'
+          }}
+        />
+        <p style={{
+          color: '#ffffff',
+          fontSize: '1.2rem',
+          marginTop: '8px',
+          marginBottom: '0',
+          fontStyle: 'italic'
+        }}>Transform your fitness aspirations into achievable milestones</p>
       </div>
 
-      <div className="goals-content">
+      <div className="content-section">
         <div className="emphasis-box">
-          <h2>Setting Your Path to Success</h2>
+          <h4 style={{ fontSize: '1.3rem' }}>Setting Your Path to Success</h4>
           <ul>
             <li><strong>SMART Goals:</strong> Make your goals Specific, Measurable, Achievable, Relevant, and Time-bound</li>
             <li><strong>Track Progress:</strong> Monitor and celebrate your achievements along the way</li>
@@ -22,35 +34,37 @@ const Goals: React.FC = () => {
           </ul>
         </div>
 
-        <div className="goals-categories">
-          <h2>Goal Categories</h2>
-          <div className="category-grid">
-            <div className="category-item">
-              <h3>Strength</h3>
-              <p>Build muscular strength through progressive overload and compound exercises</p>
-            </div>
-            <div className="category-item">
-              <h3>Weight Management</h3>
-              <p>Set and achieve healthy weight goals through balanced nutrition and exercise</p>
-            </div>
-            <div className="category-item">
-              <h3>Power</h3>
-              <p>Develop explosive strength and speed through dynamic training</p>
-            </div>
-            <div className="category-item">
-              <h3>Endurance</h3>
-              <p>Improve cardiovascular fitness and stamina for longer, stronger performance</p>
-            </div>
-            <div className="category-item">
-              <h3>Flexibility</h3>
-              <p>Enhance range of motion and mobility through stretching and mobility work</p>
-            </div>
-            <div className="category-item">
-              <h3>Tactical</h3>
-              <p>Develop functional fitness and agility for real-world movement and performance</p>
+        <section className="tools-section">
+          <div className="tool-category">
+            <h4 style={{ fontSize: '1.3rem' }}>Goal Categories</h4>
+            <div style={{ color: '#9d6be7', fontSize: '1.1em', display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+              <div className="emphasis-box" style={{ flex: '1 1 250px', margin: '0.5rem' }}>
+                <h4>Strength</h4>
+                <p>Build muscular strength through progressive overload and compound exercises</p>
+              </div>
+              <div className="emphasis-box" style={{ flex: '1 1 250px', margin: '0.5rem' }}>
+                <h4>Weight Management</h4>
+                <p>Set and achieve healthy weight goals through balanced nutrition and exercise</p>
+              </div>
+              <div className="emphasis-box" style={{ flex: '1 1 250px', margin: '0.5rem' }}>
+                <h4>Power</h4>
+                <p>Develop explosive strength and speed through dynamic training</p>
+              </div>
+              <div className="emphasis-box" style={{ flex: '1 1 250px', margin: '0.5rem' }}>
+                <h4>Endurance</h4>
+                <p>Improve cardiovascular fitness and stamina for longer, stronger performance</p>
+              </div>
+              <div className="emphasis-box" style={{ flex: '1 1 250px', margin: '0.5rem' }}>
+                <h4>Flexibility</h4>
+                <p>Enhance range of motion and mobility through stretching and mobility work</p>
+              </div>
+              <div className="emphasis-box" style={{ flex: '1 1 250px', margin: '0.5rem' }}>
+                <h4>Tactical</h4>
+                <p>Develop functional fitness and agility for real-world movement and performance</p>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </div>
   );
