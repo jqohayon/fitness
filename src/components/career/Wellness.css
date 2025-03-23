@@ -6,7 +6,7 @@
 }
 
 .wellness-focus-item:hover {
-  color: #7C9082;
+  color: #50C878;
   transform: translateY(-2px);
-  background: rgba(124, 144, 130, 0.1);
+  background: rgba(80, 200, 120, 0.1);
 } 
