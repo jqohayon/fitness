@@ -42,7 +42,6 @@ const Supplementation: React.FC = () => {
               <span>BCAAs</span>
               <span>Pre-Workout</span>
               <span>Vitamins</span>
-              <span>Fish Oil</span>
               <span>Minerals</span>
               <span>Electrolytes</span>
             </div>
