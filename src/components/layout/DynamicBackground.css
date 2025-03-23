@@ -11,7 +11,7 @@
 
 /* Wellness Theme - Leaves */
 .leaf {
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2350C878"><path d="M12 2L8 6H4l4 4-4 4h4l4 4 4-4h4l-4-4 4-4h-4z"/></svg>') no-repeat center center;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%234ABED9"><path d="M12 2L8 6H4l4 4-4 4h4l4 4 4-4h4l-4-4 4-4h-4z"/></svg>') no-repeat center center;
   background-size: contain;
   transform-origin: center;
 }
