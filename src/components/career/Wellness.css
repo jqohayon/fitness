@@ -9,4 +9,26 @@
   color: #50C878;
   transform: translateY(-2px);
   background: rgba(80, 200, 120, 0.1);
+}
+
+/* Custom bullet points for the wellness page */
+.emphasis-box ul {
+  list-style: none;
+  padding-left: 1.5em;
+}
+
+.emphasis-box ul li {
+  position: relative;
+  margin-bottom: 1em;
+}
+
+.emphasis-box ul li::before {
+  content: '';
+  position: absolute;
+  left: -1.5em;
+  top: 0.25em;
+  width: 1em;
+  height: 1em;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2350C878"><path d="M12 2L8 6H4l4 4-4 4h4l4 4 4-4h4l-4-4 4-4h-4z"/></svg>') no-repeat center center;
+  background-size: contain;
 } 
