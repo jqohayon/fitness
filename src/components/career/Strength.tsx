@@ -45,14 +45,11 @@ const Strength: React.FC = () => {
               flexWrap: 'wrap',
               color: '#FF8B8B'
             }}>
-              <span className="strength-focus-item">Squats</span>
-              <span className="strength-focus-item">Deadlifts</span>
-              <span className="strength-focus-item">Bench Press</span>
-              <span className="strength-focus-item">Rows</span>
-              <span className="strength-focus-item">Pull-ups</span>
-              <span className="strength-focus-item">Overhead Press</span>
-              <span className="strength-focus-item">Hip Thrust</span>
-              <span className="strength-focus-item">Core Work</span>
+              <span className="strength-focus-item">Calisthenics</span>
+              <span className="strength-focus-item">Bodyweight</span>
+              <span className="strength-focus-item">Free Weights</span>
+              <span className="strength-focus-item">Olympic Lifting</span>
+              <span className="strength-focus-item">Machines</span>
             </div>
           </div>
         </section>
