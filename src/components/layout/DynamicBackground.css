@@ -1,0 +1,59 @@
+/* Common styles for all floating elements */
+.leaf, .equipment, .wave {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+/* Wellness Theme - Leaves */
+.leaf {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%237C9082"><path d="M12 2L8 6H4l4 4-4 4h4l4 4 4-4h4l-4-4 4-4h-4z"/></svg>') no-repeat center center;
+  filter: drop-shadow(0 0 2px rgba(124, 144, 130, 0.3));
+}
+
+.leaf-1 { top: 15%; animation: float-right 40s linear infinite; }
+.leaf-2 { top: 45%; animation: float-right 45s linear infinite; }
+.leaf-3 { top: 70%; animation: float-right 35s linear infinite; }
+.leaf-4 { top: 30%; animation: float-left 40s linear infinite; }
+.leaf-5 { top: 55%; animation: float-left 35s linear infinite; }
+.leaf-6 { top: 80%; animation: float-left 50s linear infinite; }
+
+/* Strength Theme - Equipment */
+.equipment {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23E29578"><path d="M20 6h-2v7h2V6M8 6H6v7h2V6M3 13h18v2H3v-2M2 6h2v7H2V6m19 0h1v7h-1V6M4 6h12v7H4V6"/></svg>') no-repeat center center;
+  filter: drop-shadow(0 0 2px rgba(226, 149, 120, 0.3));
+}
+
+.equipment-1 { top: 15%; animation: float-right 40s linear infinite; }
+.equipment-2 { top: 45%; animation: float-right 45s linear infinite; }
+.equipment-3 { top: 70%; animation: float-right 35s linear infinite; }
+.equipment-4 { top: 30%; animation: float-left 40s linear infinite; }
+.equipment-5 { top: 55%; animation: float-left 35s linear infinite; }
+.equipment-6 { top: 80%; animation: float-left 50s linear infinite; }
+
+/* Cardio Theme - Energy Waves */
+.wave {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2383C5BE"><path d="M3 12h3l3-9 6 18 3-9h3"/></svg>') no-repeat center center;
+  filter: drop-shadow(0 0 2px rgba(131, 197, 190, 0.3));
+}
+
+.wave-1 { top: 15%; animation: float-right 40s linear infinite; }
+.wave-2 { top: 45%; animation: float-right 45s linear infinite; }
+.wave-3 { top: 70%; animation: float-right 35s linear infinite; }
+.wave-4 { top: 30%; animation: float-left 40s linear infinite; }
+.wave-5 { top: 55%; animation: float-left 35s linear infinite; }
+.wave-6 { top: 80%; animation: float-left 50s linear infinite; }
+
+/* Reuse existing float animations from App.css */
+@keyframes float-right {
+  from { left: -150px; }
+  to { left: 100%; }
+}
+
+@keyframes float-left {
+  from { right: -150px; }
+  to { right: 100%; }
+} 
