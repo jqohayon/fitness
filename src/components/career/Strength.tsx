@@ -50,6 +50,7 @@ const Strength: React.FC = () => {
               <span className="strength-focus-item">Free Weights</span>
               <span className="strength-focus-item">Olympic Lifting</span>
               <span className="strength-focus-item">Machines</span>
+              <span className="strength-focus-item">Circuit Training</span>
             </div>
           </div>
         </section>
