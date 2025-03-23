@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaFlag } from 'react-icons/fa';
-import '../styles/Goals.css';
+import '../../styles/Goals.css';
 
 const Goals: React.FC = () => {
   return (
