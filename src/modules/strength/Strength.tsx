@@ -40,14 +40,28 @@ const Strength: React.FC = () => {
         <h2>Training Methods</h2>
         <div className="methods-grid">
           {trainingMethods.map((method) => (
-            <button
+            <div
               key={method.name}
               className="method-button"
-              onClick={() => navigate(method.path)}
+              onClick={() => {
+                alert(`Clicking ${method.name}`);
+                navigate(method.path);
+              }}
+              style={{
+                cursor: 'pointer',
+                padding: '20px',
+                border: '1px solid #ccc',
+                borderRadius: '8px',
+                textAlign: 'center',
+                backgroundColor: '#f5f5f5',
+                transition: 'background-color 0.2s'
+              }}
+              onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#e0e0e0'}
+              onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#f5f5f5'}
             >
               <span className="method-icon">{method.icon}</span>
               <span className="method-name">{method.name}</span>
-            </button>
+            </div>
           ))}
         </div>
       </div>

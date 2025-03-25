@@ -26,6 +26,11 @@ import { Goals } from './modules/goals';
 import { Resources } from './modules/resources';
 import { Contributions } from './modules/contributions';
 
+// Test component
+const TestComponent: React.FC = () => {
+  return <div>Test Route Working!</div>;
+};
+
 const App: React.FC = () => {
   return (
     <div className="app">
@@ -34,6 +39,7 @@ const App: React.FC = () => {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/test" element={<TestComponent />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/strength" element={<Strength />} />
           <Route path="/cardio" element={<Cardio />} />
@@ -50,15 +56,6 @@ const App: React.FC = () => {
           <Route path="/strength/olympic-lifting" element={<OlympicLifting />} />
           <Route path="/strength/machines" element={<Machines />} />
           <Route path="/strength/circuit-training" element={<CircuitTraining />} />
-          
-          {/* Cardio Training Routes */}
-          <Route path="/cardio/running" element={<Running />} />
-          <Route path="/cardio/cycling" element={<Cycling />} />
-          <Route path="/cardio/swimming" element={<Swimming />} />
-          <Route path="/cardio/hiit" element={<HIIT />} />
-          <Route path="/cardio/jump-rope" element={<JumpRope />} />
-          <Route path="/cardio/walking" element={<Walking />} />
-          <Route path="/cardio/machines" element={<CardioMachines />} />
           
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
