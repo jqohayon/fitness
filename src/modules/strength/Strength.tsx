@@ -8,12 +8,12 @@ const Strength: React.FC = () => {
   const navigate = useNavigate();
 
   const trainingMethods = [
-    { name: 'Free Weights', path: '/strength/free-weights', icon: <FaDumbbell /> },
-    { name: 'Olympic Lifting', path: '/strength/olympic-lifting', icon: <GiWeightLiftingUp /> },
-    { name: 'Machines', path: '/strength/machines', icon: <GiGymBag /> },
-    { name: 'Calisthenics', path: '/strength/calisthenics', icon: <GiMuscleUp /> },
-    { name: 'Bodyweight', path: '/strength/bodyweight', icon: <FaRunning /> },
-    { name: 'Circuit Training', path: '/strength/circuit-training', icon: <FaWeight /> }
+    { name: 'Free Weights', path: '#/strength/free-weights', icon: <FaDumbbell /> },
+    { name: 'Olympic Lifting', path: '#/strength/olympic-lifting', icon: <GiWeightLiftingUp /> },
+    { name: 'Machines', path: '#/strength/machines', icon: <GiGymBag /> },
+    { name: 'Calisthenics', path: '#/strength/calisthenics', icon: <GiMuscleUp /> },
+    { name: 'Bodyweight', path: '#/strength/bodyweight', icon: <FaRunning /> },
+    { name: 'Circuit Training', path: '#/strength/circuit-training', icon: <FaWeight /> }
   ];
 
   return (
