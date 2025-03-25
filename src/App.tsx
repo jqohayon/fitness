@@ -19,12 +19,6 @@ import {
 
 // Import other modules (to be created)
 import { Cardio } from './modules/cardio';
-import { Nutrition } from './modules/nutrition';
-import { Wellness } from './modules/wellness';
-import { Supplementation } from './modules/supplementation';
-import { Goals } from './modules/goals';
-import { Resources } from './modules/resources';
-import { Contributions } from './modules/contributions';
 
 // Test component
 const TestComponent: React.FC = () => {
@@ -40,14 +34,8 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/test" element={<TestComponent />} />
-          <Route path="/resources" element={<Resources />} />
           <Route path="/strength" element={<Strength />} />
           <Route path="/cardio" element={<Cardio />} />
-          <Route path="/nutrition" element={<Nutrition />} />
-          <Route path="/wellness" element={<Wellness />} />
-          <Route path="/supplementation" element={<Supplementation />} />
-          <Route path="/goals" element={<Goals />} />
-          <Route path="/contributions" element={<Contributions />} />
           
           {/* Strength Training Routes */}
           <Route path="/strength/calisthenics" element={<Calisthenics />} />
