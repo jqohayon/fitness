@@ -1,50 +1,81 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../GoogleDocViewer.css';
-import { FaRunning } from 'react-icons/fa';
+import { GiHeartBeats } from 'react-icons/gi';
+import './Cardio.css';
 
 const Cardio: React.FC = () => {
+  const navigate = useNavigate();
+
+  const trainingMethods = [
+    { name: 'Running', path: '/cardio/running' },
+    { name: 'Cycling', path: '/cardio/cycling' },
+    { name: 'Swimming', path: '/cardio/swimming' },
+    { name: 'HIIT', path: '/cardio/hiit' },
+    { name: 'Jump Rope', path: '/cardio/jump-rope' },
+    { name: 'Walking', path: '/cardio/walking' },
+    { name: 'Machines', path: '/cardio/machines' }
+  ];
+
   return (
     <div className="doc-container">
-      <h2>Cardio Training</h2>
+      <h2 style={{ color: '#FF6B6B' }}>Cardiovascular Training</h2>
       <div style={{ textAlign: 'center', marginTop: '-15px', marginBottom: '15px' }}>
-        <FaRunning 
+        <GiHeartBeats 
           style={{ 
-            fontSize: '2rem',
-            color: '#6a1b9a',
+            fontSize: '2.5rem',
+            color: '#FF6B6B',
             transition: 'all 0.3s ease'
           }}
         />
         <p style={{
-          color: '#ffffff',
+          color: '#FF8B8B',
           fontSize: '1.2rem',
           marginTop: '8px',
           marginBottom: '0',
           fontStyle: 'italic'
         }}>Elevate your endurance and heart health.</p>
       </div>
-      <div className="content-section">
-        <div className="emphasis-box">
-          <h4 style={{ fontSize: '1.3rem' }}>Training Benefits</h4>
-          <ul>
-            <li><strong>Endurance:</strong> Build stamina and cardiovascular fitness.</li>
-            <li><strong>Heart Health:</strong> Improve cardiovascular function and efficiency.</li>
-            <li><strong>Fat Loss:</strong> Optimize calorie burn and metabolism.</li>
-            <li><strong>Recovery:</strong> Active recovery and conditioning techniques.</li>
+      <div className="content-section" style={{ background: 'rgba(255, 107, 107, 0.1)' }}>
+        <div className="emphasis-box" style={{ borderLeft: '4px solid #FF6B6B' }}>
+          <h4 style={{ fontSize: '1.3rem', color: '#FF6B6B' }}>Training Benefits</h4>
+          <ul style={{ color: '#FF8B8B' }}>
+            <li><strong style={{ color: '#FF6B6B' }}>Endurance:</strong> Build stamina and cardiovascular fitness.</li>
+            <li><strong style={{ color: '#FF6B6B' }}>Heart Health:</strong> Improve cardiovascular function and efficiency.</li>
+            <li><strong style={{ color: '#FF6B6B' }}>Fat Loss:</strong> Optimize calorie burn and metabolism.</li>
+            <li><strong style={{ color: '#FF6B6B' }}>Recovery:</strong> Active recovery and conditioning techniques.</li>
           </ul>
         </div>
 
         <section className="tools-section">
           <div className="tool-category">
-            <h4 style={{ fontSize: '1.3rem' }}>Training Methods</h4>
-            <div style={{ color: '#9d6be7', fontSize: '1.1em', display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <span>HIIT</span>
-              <span>Running</span>
-              <span>Cycling</span>
-              <span>Swimming</span>
-              <span>Jump Rope</span>
-              <span>Rowing</span>
-              <span>Stairs</span>
-              <span>Boxing</span>
+            <h4 style={{ fontSize: '1.3rem', color: '#FF6B6B' }}>Training Methods</h4>
+            <div style={{ 
+              fontSize: '1.1em', 
+              display: 'flex', 
+              gap: '1.5rem', 
+              justifyContent: 'center', 
+              flexWrap: 'wrap',
+              color: '#FF8B8B'
+            }}>
+              {trainingMethods.map((method) => (
+                <button
+                  key={method.path}
+                  className="cardio-focus-item"
+                  onClick={() => navigate(method.path)}
+                  style={{
+                    background: 'none',
+                    border: 'none',
+                    cursor: 'pointer',
+                    padding: '0.5rem 1rem',
+                    color: 'inherit',
+                    font: 'inherit',
+                    textAlign: 'center'
+                  }}
+                >
+                  {method.name}
+                </button>
+              ))}
             </div>
           </div>
         </section>
