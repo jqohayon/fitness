@@ -10,6 +10,7 @@ import Nutrition from './components/career/Nutrition';
 import Wellness from './components/career/Wellness';
 import Supplementation from './components/career/Supplementation';
 import Goals from './components/career/Goals';
+import Contributions from './components/career/Contributions';
 import SocialLinks from './components/SocialLinks';
 import './App.css';
 
@@ -21,13 +22,14 @@ import OlympicLifting from './components/career/strength/OlympicLifting';
 import Machines from './components/career/strength/Machines';
 import CircuitTraining from './components/career/strength/CircuitTraining';
 
+// Import cardio components
 import Running from './components/career/cardio/Running';
 import Cycling from './components/career/cardio/Cycling';
 import Swimming from './components/career/cardio/Swimming';
 import HIIT from './components/career/cardio/HIIT';
 import JumpRope from './components/career/cardio/JumpRope';
 import Walking from './components/career/cardio/Walking';
-import CardioMachines from './components/career/cardio/Machines';
+import CardioMachines from './components/career/cardio/CardioMachines';
 
 const App: React.FC = () => {
   return (
@@ -44,6 +46,7 @@ const App: React.FC = () => {
           <Route path="/wellness" element={<Wellness />} />
           <Route path="/supplementation" element={<Supplementation />} />
           <Route path="/goals" element={<Goals />} />
+          <Route path="/contributions" element={<Contributions />} />
           
           {/* Strength Training Routes */}
           <Route path="/strength/calisthenics" element={<Calisthenics />} />
