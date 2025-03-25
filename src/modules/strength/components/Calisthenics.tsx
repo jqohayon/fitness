@@ -1,37 +1,54 @@
 import React from 'react';
-import '../../../components/GoogleDocViewer.css';
-import { GiWeightLiftingUp } from 'react-icons/gi';
+import { GiMuscleUp } from 'react-icons/gi';
+import '../../../GoogleDocViewer.css';
 
 const Calisthenics: React.FC = () => {
   return (
-    <div className="doc-container">
-      <h2 style={{ color: '#E63946' }}>Calisthenics Training</h2>
-      <div style={{ textAlign: 'center', marginTop: '-15px', marginBottom: '15px' }}>
-        <GiWeightLiftingUp 
-          style={{ 
-            fontSize: '2.5rem',
-            color: '#E63946',
-            transition: 'all 0.3s ease'
-          }}
-        />
-        <p style={{
-          color: '#FF8B8B',
-          fontSize: '1.2rem',
-          marginTop: '8px',
-          marginBottom: '0',
-          fontStyle: 'italic'
-        }}>Build strength using your body weight.</p>
+    <div className="training-method-container">
+      <h1>Calisthenics</h1>
+      <div className="method-icon">
+        <GiMuscleUp size={48} />
       </div>
-      <div className="content-section" style={{ background: 'rgba(230, 57, 70, 0.1)' }}>
-        <div className="emphasis-box" style={{ borderLeft: '4px solid #E63946' }}>
-          <h4 style={{ fontSize: '1.3rem', color: '#E63946' }}>Training Benefits</h4>
-          <ul style={{ color: '#FF8B8B' }}>
-            <li><strong style={{ color: '#E63946' }}>Body Control:</strong> Master your body movements and coordination.</li>
-            <li><strong style={{ color: '#E63946' }}>Functional Strength:</strong> Develop practical, real-world strength.</li>
-            <li><strong style={{ color: '#E63946' }}>Flexibility:</strong> Improve range of motion and mobility.</li>
-            <li><strong style={{ color: '#E63946' }}>Progressive Overload:</strong> Scale exercises to your fitness level.</li>
-          </ul>
-        </div>
+      
+      <div className="method-description">
+        <p>Calisthenics is a form of strength training that uses body weight exercises to build strength, 
+           flexibility, and control. It emphasizes mastery of fundamental movements and progression to advanced skills.</p>
+      </div>
+
+      <div className="benefits-section">
+        <h2>Benefits of Calisthenics</h2>
+        <ul>
+          <li>Builds functional strength</li>
+          <li>Improves body control</li>
+          <li>Enhances flexibility</li>
+          <li>Minimal equipment needed</li>
+          <li>Can be done anywhere</li>
+          <li>Develops body awareness</li>
+        </ul>
+      </div>
+
+      <div className="movements-section">
+        <h2>Core Movements</h2>
+        <ul>
+          <li>Push-ups</li>
+          <li>Pull-ups</li>
+          <li>Dips</li>
+          <li>Muscle-ups</li>
+          <li>Handstands</li>
+          <li>Planche progressions</li>
+        </ul>
+      </div>
+
+      <div className="tips-section">
+        <h2>Tips for Success</h2>
+        <ul>
+          <li>Master basic movements first</li>
+          <li>Progress gradually to harder variations</li>
+          <li>Focus on form and control</li>
+          <li>Include mobility work</li>
+          <li>Be patient with skill development</li>
+          <li>Train consistently</li>
+        </ul>
       </div>
     </div>
   );
