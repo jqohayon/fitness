@@ -1,9 +1,21 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../GoogleDocViewer.css';
 import { GiWeightLiftingUp } from 'react-icons/gi';
 import './Strength.css';
 
 const Strength: React.FC = () => {
+  const navigate = useNavigate();
+
+  const trainingMethods = [
+    { name: 'Calisthenics', path: '/strength/calisthenics' },
+    { name: 'Bodyweight', path: '/strength/bodyweight' },
+    { name: 'Free Weights', path: '/strength/free-weights' },
+    { name: 'Olympic Lifting', path: '/strength/olympic-lifting' },
+    { name: 'Machines', path: '/strength/machines' },
+    { name: 'Circuit Training', path: '/strength/circuit-training' }
+  ];
+
   return (
     <div className="doc-container">
       <h2 style={{ color: '#E63946' }}>Strength Training</h2>
@@ -45,12 +57,24 @@ const Strength: React.FC = () => {
               flexWrap: 'wrap',
               color: '#FF8B8B'
             }}>
-              <span className="strength-focus-item">Calisthenics</span>
-              <span className="strength-focus-item">Bodyweight</span>
-              <span className="strength-focus-item">Free Weights</span>
-              <span className="strength-focus-item">Olympic Lifting</span>
-              <span className="strength-focus-item">Machines</span>
-              <span className="strength-focus-item">Circuit Training</span>
+              {trainingMethods.map((method) => (
+                <button
+                  key={method.path}
+                  className="strength-focus-item"
+                  onClick={() => navigate(method.path)}
+                  style={{
+                    background: 'none',
+                    border: 'none',
+                    cursor: 'pointer',
+                    padding: '0.5rem 1rem',
+                    color: 'inherit',
+                    font: 'inherit',
+                    textAlign: 'center'
+                  }}
+                >
+                  {method.name}
+                </button>
+              ))}
             </div>
           </div>
         </section>

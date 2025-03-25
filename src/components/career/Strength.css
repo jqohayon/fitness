@@ -3,6 +3,11 @@
   cursor: pointer;
   padding: 5px 10px;
   border-radius: 4px;
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  text-align: center;
 }
 
 .strength-focus-item:hover {
