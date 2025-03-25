@@ -1,13 +1,13 @@
 import React from 'react';
-import '../GoogleDocViewer.css';
-import { GiHeartBeats } from 'react-icons/gi';
+import '../../GoogleDocViewer.css';
+import { GiJumpingRope } from 'react-icons/gi';
 
 const JumpRope: React.FC = () => {
   return (
     <div className="doc-container">
       <h2 style={{ color: '#FF6B6B' }}>Jump Rope</h2>
       <div style={{ textAlign: 'center', marginTop: '-15px', marginBottom: '15px' }}>
-        <GiHeartBeats 
+        <GiJumpingRope 
           style={{ 
             fontSize: '2.5rem',
             color: '#FF6B6B',

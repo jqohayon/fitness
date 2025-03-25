@@ -1,6 +1,7 @@
 import React from 'react';
-import '../GoogleDocViewer.css';
+import '../../GoogleDocViewer.css';
 import { GiHeartBeats } from 'react-icons/gi';
+import { FaFire } from 'react-icons/fa';
 
 const HIIT: React.FC = () => {
   return (

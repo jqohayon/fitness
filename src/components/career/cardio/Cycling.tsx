@@ -1,5 +1,6 @@
 import React from 'react';
-import '../GoogleDocViewer.css';
+import '../../GoogleDocViewer.css';
+import { FaBicycle } from 'react-icons/fa';
 import { GiHeartBeats } from 'react-icons/gi';
 
 const Cycling: React.FC = () => {

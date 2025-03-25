@@ -1,13 +1,13 @@
 import React from 'react';
-import '../GoogleDocViewer.css';
-import { GiHeartBeats } from 'react-icons/gi';
+import '../../GoogleDocViewer.css';
+import { FaWalking } from 'react-icons/fa';
 
 const Walking: React.FC = () => {
   return (
     <div className="doc-container">
       <h2 style={{ color: '#FF6B6B' }}>Walking</h2>
       <div style={{ textAlign: 'center', marginTop: '-15px', marginBottom: '15px' }}>
-        <GiHeartBeats 
+        <FaWalking 
           style={{ 
             fontSize: '2.5rem',
             color: '#FF6B6B',

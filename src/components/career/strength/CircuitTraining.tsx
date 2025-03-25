@@ -1,5 +1,5 @@
 import React from 'react';
-import '../GoogleDocViewer.css';
+import '../../GoogleDocViewer.css';
 import { GiWeightLiftingUp } from 'react-icons/gi';
 
 const CircuitTraining: React.FC = () => {

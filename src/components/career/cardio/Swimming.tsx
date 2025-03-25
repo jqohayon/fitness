@@ -1,5 +1,6 @@
 import React from 'react';
-import '../GoogleDocViewer.css';
+import '../../GoogleDocViewer.css';
+import { FaSwimmer } from 'react-icons/fa';
 import { GiHeartBeats } from 'react-icons/gi';
 
 const Swimming: React.FC = () => {
