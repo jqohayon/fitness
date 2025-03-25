@@ -3,33 +3,28 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import Navigation from './components/layout/Navigation';
 import DynamicBackground from './components/layout/DynamicBackground';
 import Home from './components/Home';
-import Resources from './components/career/Resources';
-import Strength from './components/career/Strength';
-import Cardio from './components/career/Cardio';
-import Nutrition from './components/career/Nutrition';
-import Wellness from './components/career/Wellness';
-import Supplementation from './components/career/Supplementation';
-import Goals from './components/career/Goals';
-import Contributions from './components/career/Contributions';
 import SocialLinks from './components/SocialLinks';
 import './App.css';
 
-// Import training method components
-import Calisthenics from './components/career/strength/Calisthenics';
-import Bodyweight from './components/career/strength/Bodyweight';
-import FreeWeights from './components/career/strength/FreeWeights';
-import OlympicLifting from './components/career/strength/OlympicLifting';
-import Machines from './components/career/strength/Machines';
-import CircuitTraining from './components/career/strength/CircuitTraining';
+// Import modules
+import {
+  Strength,
+  Calisthenics,
+  Bodyweight,
+  FreeWeights,
+  OlympicLifting,
+  Machines,
+  CircuitTraining
+} from './modules/strength';
 
-// Import cardio components
-import Running from './components/career/cardio/Running';
-import Cycling from './components/career/cardio/Cycling';
-import Swimming from './components/career/cardio/Swimming';
-import HIIT from './components/career/cardio/HIIT';
-import JumpRope from './components/career/cardio/JumpRope';
-import Walking from './components/career/cardio/Walking';
-import CardioMachines from './components/career/cardio/CardioMachines';
+// Import other modules (to be created)
+import { Cardio } from './modules/cardio';
+import { Nutrition } from './modules/nutrition';
+import { Wellness } from './modules/wellness';
+import { Supplementation } from './modules/supplementation';
+import { Goals } from './modules/goals';
+import { Resources } from './modules/resources';
+import { Contributions } from './modules/contributions';
 
 const App: React.FC = () => {
   return (

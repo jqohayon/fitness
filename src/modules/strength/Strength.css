@@ -1,0 +1,8 @@
+.strength-focus-item {
+  transition: all 0.3s ease;
+}
+
+.strength-focus-item:hover {
+  color: #E63946;
+  transform: scale(1.1);
+} 

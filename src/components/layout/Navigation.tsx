@@ -1,6 +1,6 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { FaHome } from 'react-icons/fa';
+import { NavLink, NavLinkProps } from 'react-router-dom';
+import { FaHome, FaHandHoldingHeart } from 'react-icons/fa';
 import '../Navigation.css';
 
 type NavLinkClassNameProps = {
@@ -34,6 +34,9 @@ const Navigation: React.FC = () => {
       </NavLink>
       <NavLink to="/supplementation" className={({ isActive }: NavLinkClassNameProps) => isActive ? 'nav-link active' : 'nav-link'}>
         Supplementation
+      </NavLink>
+      <NavLink to="/contributions" className={({ isActive }: NavLinkClassNameProps) => isActive ? 'nav-link active' : 'nav-link'}>
+        <FaHandHoldingHeart size={24} />
       </NavLink>
       <NavLink to="/resources" className={({ isActive }: NavLinkClassNameProps) => isActive ? 'nav-link active' : 'nav-link'}>
         Resources

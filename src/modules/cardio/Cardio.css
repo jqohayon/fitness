@@ -1,0 +1,69 @@
+.cardio-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cardio-description {
+  margin: 2rem 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.cardio-benefits {
+  margin: 2rem 0;
+}
+
+.cardio-benefits ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cardio-benefits li {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.cardio-benefits li::before {
+  content: "•";
+  color: #E63946;
+  position: absolute;
+  left: 0;
+}
+
+.methods-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.method-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: #fff;
+  border: 2px solid #E63946;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.method-button:hover {
+  background-color: #E63946;
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+.method-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.method-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+} 
