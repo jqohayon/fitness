@@ -1,6 +1,6 @@
 import React from 'react';
 import { GiMuscleUp } from 'react-icons/gi';
-import '../../../GoogleDocViewer.css';
+import '../../../../GoogleDocViewer.css';
 
 const Calisthenics: React.FC = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import { GiWeightLiftingUp } from 'react-icons/gi';
-import '../../../GoogleDocViewer.css';
+import '../../../../GoogleDocViewer.css';
 
 const OlympicLifting: React.FC = () => {
   return (

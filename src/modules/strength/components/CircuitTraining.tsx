@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaWeight } from 'react-icons/fa';
-import '../../../GoogleDocViewer.css';
+import '../../../../GoogleDocViewer.css';
 
 const CircuitTraining: React.FC = () => {
   return (

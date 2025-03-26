@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaRunning } from 'react-icons/fa';
-import '../../../GoogleDocViewer.css';
+import '../../../../GoogleDocViewer.css';
 
 const Bodyweight: React.FC = () => {
   return (
