@@ -1,6 +1,6 @@
 import React from 'react';
 import { GiGymBag } from 'react-icons/gi';
-import '../../../../GoogleDocViewer.css';
+import '../../../GoogleDocViewer.css';
 
 const Machines: React.FC = () => {
   return (

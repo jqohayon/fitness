@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaDumbbell } from 'react-icons/fa';
-import '../../../../GoogleDocViewer.css';
+import '../../../GoogleDocViewer.css';
 
 const FreeWeights: React.FC = () => {
   return (
