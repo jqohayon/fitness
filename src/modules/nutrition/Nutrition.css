@@ -1,0 +1,18 @@
+.nutrition-focus-item {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  background: rgba(106, 27, 154, 0.1);
+  border: 2px solid transparent;
+  color: #9d6be7;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+}
+
+.nutrition-focus-item:hover {
+  color: #6a1b9a;
+  transform: translateY(-2px);
+  border-color: #6a1b9a;
+  background: rgba(106, 27, 154, 0.15);
+} 
