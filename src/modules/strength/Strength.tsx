@@ -8,13 +8,18 @@ const Strength: React.FC = () => {
   const navigate = useNavigate();
 
   const trainingMethods = [
-    { name: 'Free Weights', path: '/strength/free-weights', icon: <FaDumbbell /> },
-    { name: 'Olympic Lifting', path: '/strength/olympic-lifting', icon: <GiWeightLiftingUp /> },
-    { name: 'Machines', path: '/strength/machines', icon: <GiGymBag /> },
-    { name: 'Calisthenics', path: '/strength/calisthenics', icon: <GiMuscleUp /> },
-    { name: 'Bodyweight', path: '/strength/bodyweight', icon: <FaRunning /> },
-    { name: 'Circuit Training', path: '/strength/circuit-training', icon: <FaWeight /> }
+    { name: 'Free Weights', path: 'strength/free-weights', icon: <FaDumbbell /> },
+    { name: 'Olympic Lifting', path: 'strength/olympic-lifting', icon: <GiWeightLiftingUp /> },
+    { name: 'Machines', path: 'strength/machines', icon: <GiGymBag /> },
+    { name: 'Calisthenics', path: 'strength/calisthenics', icon: <GiMuscleUp /> },
+    { name: 'Bodyweight', path: 'strength/bodyweight', icon: <FaRunning /> },
+    { name: 'Circuit Training', path: 'strength/circuit-training', icon: <FaWeight /> }
   ];
+
+  const handleMethodClick = (path: string) => {
+    console.log('Navigating to:', path);
+    navigate(path);
+  };
 
   return (
     <div className="strength-container">
@@ -43,10 +48,7 @@ const Strength: React.FC = () => {
             <div
               key={method.name}
               className="method-button"
-              onClick={() => {
-                alert(`Clicking ${method.name}`);
-                navigate(method.path);
-              }}
+              onClick={() => handleMethodClick(method.path)}
               style={{
                 cursor: 'pointer',
                 padding: '20px',
