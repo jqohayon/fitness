@@ -1,0 +1,1139 @@
+From 321b96882541755adb2d8002498003a31eb29427 Mon Sep 17 00:00:00 2001
+From: jqohayon <jqohayon@gmail.com>
+Date: Thu, 27 Mar 2025 21:34:01 -0400
+Subject: [PATCH 1/4] fix: update styling to match other pages
+
+---
+ src/GoogleDocViewer.css | 23 ++++++++++++++++++++---
+ 1 file changed, 20 insertions(+), 3 deletions(-)
+
+diff --git a/src/GoogleDocViewer.css b/src/GoogleDocViewer.css
+index 1a4ea7a4..b90c2e4b 100644
+--- a/src/GoogleDocViewer.css
++++ b/src/GoogleDocViewer.css
+@@ -1,16 +1,19 @@
+ .training-method-container {
+   max-width: 800px;
+-  margin: 0 auto;
++  margin: 2rem auto;
+   padding: 2rem;
+-  background-color: rgba(255, 255, 255, 0.9);
++  background-color: rgba(255, 255, 255, 0.95);
+   border-radius: 12px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
++  font-family: 'Arial', sans-serif;
+ }
+ 
+ .training-method-container h1 {
+   color: #1D3557;
+   margin-bottom: 1.5rem;
+   text-align: center;
++  font-size: 2.5rem;
++  font-weight: bold;
+ }
+ 
+ .method-icon {
+@@ -23,17 +26,23 @@
+ .training-method-container h2 {
+   color: #1D3557;
+   margin: 1.5rem 0 1rem;
++  font-size: 1.8rem;
++  font-weight: 600;
+ }
+ 
+ .training-method-container ul {
+   list-style-type: none;
+   padding: 0;
++  margin: 0;
+ }
+ 
+ .training-method-container li {
+-  margin: 0.5rem 0;
++  margin: 0.8rem 0;
+   padding-left: 1.5rem;
+   position: relative;
++  font-size: 1.1rem;
++  line-height: 1.5;
++  color: #2B2D42;
+ }
+ 
+ .training-method-container li:before {
+@@ -41,4 +50,12 @@
+   color: #E63946;
+   position: absolute;
+   left: 0;
++  font-size: 1.2rem;
++}
++
++.training-method-container p {
++  font-size: 1.1rem;
++  line-height: 1.6;
++  color: #2B2D42;
++  margin-bottom: 1.5rem;
+ } 
+\ No newline at end of file
+-- 
+2.48.1
+
+
+From f3a66e02ef2026c6e360268377d80eccc5970b84 Mon Sep 17 00:00:00 2001
+From: jqohayon <jqohayon@gmail.com>
+Date: Thu, 27 Mar 2025 21:36:32 -0400
+Subject: [PATCH 2/4] fix: restore routes and add placeholder components for
+ all sections
+
+---
+ src/App.tsx | 53 ++++++++++++++++++++++++++++++++++++++++++++++++-----
+ 1 file changed, 48 insertions(+), 5 deletions(-)
+
+diff --git a/src/App.tsx b/src/App.tsx
+index f8390f45..7bcba101 100644
+--- a/src/App.tsx
++++ b/src/App.tsx
+@@ -20,10 +20,48 @@ import {
+ // Import other modules (to be created)
+ import { Cardio } from './modules/cardio';
+ 
+-// Test component
+-const TestComponent: React.FC = () => {
+-  return <div>Test Route Working!</div>;
+-};
++// Placeholder components for unimplemented sections
++const Nutrition: React.FC = () => (
++  <div className="training-method-container">
++    <h1>Nutrition</h1>
++    <p>Coming soon! This section will provide comprehensive information about nutrition and diet.</p>
++  </div>
++);
++
++const Wellness: React.FC = () => (
++  <div className="training-method-container">
++    <h1>Wellness</h1>
++    <p>Coming soon! This section will cover mental and physical wellness practices.</p>
++  </div>
++);
++
++const Supplementation: React.FC = () => (
++  <div className="training-method-container">
++    <h1>Supplementation</h1>
++    <p>Coming soon! This section will provide information about supplements and their proper use.</p>
++  </div>
++);
++
++const Goals: React.FC = () => (
++  <div className="training-method-container">
++    <h1>Goals</h1>
++    <p>Coming soon! This section will help you set and track your fitness goals.</p>
++  </div>
++);
++
++const Resources: React.FC = () => (
++  <div className="training-method-container">
++    <h1>Resources</h1>
++    <p>Coming soon! This section will provide additional resources and references.</p>
++  </div>
++);
++
++const Contributions: React.FC = () => (
++  <div className="training-method-container">
++    <h1>Contributions</h1>
++    <p>Coming soon! This section will provide information about contributing to the project.</p>
++  </div>
++);
+ 
+ const App: React.FC = () => {
+   return (
+@@ -33,9 +71,14 @@ const App: React.FC = () => {
+       <main>
+         <Routes>
+           <Route path="/" element={<Home />} />
+-          <Route path="/test" element={<TestComponent />} />
+           <Route path="/strength" element={<Strength />} />
+           <Route path="/cardio" element={<Cardio />} />
++          <Route path="/nutrition" element={<Nutrition />} />
++          <Route path="/wellness" element={<Wellness />} />
++          <Route path="/supplementation" element={<Supplementation />} />
++          <Route path="/goals" element={<Goals />} />
++          <Route path="/resources" element={<Resources />} />
++          <Route path="/contributions" element={<Contributions />} />
+           
+           {/* Strength Training Routes */}
+           <Route path="/strength/calisthenics" element={<Calisthenics />} />
+-- 
+2.48.1
+
+
+From 016881a0e9f23dbcde254bc07a001a7759dc81eb Mon Sep 17 00:00:00 2001
+From: jqohayon <jqohayon@gmail.com>
+Date: Thu, 27 Mar 2025 21:46:58 -0400
+Subject: [PATCH 3/4] feat: restore original formatting and styles for Strength
+ and Cardio components, add Goals, Nutrition, Resources, Supplementation, and
+ Wellness modules
+
+---
+ src/modules/cardio/Cardio.css                 |  18 +++
+ src/modules/cardio/Cardio.tsx                 | 107 ++++++++++------
+ src/modules/goals/Goals.tsx                   |  73 +++++++++++
+ src/modules/goals/index.ts                    |   1 +
+ src/modules/nutrition/Nutrition.tsx           |  56 ++++++++
+ src/modules/nutrition/index.ts                |   1 +
+ src/modules/resources/Resources.css           |  14 ++
+ src/modules/resources/Resources.tsx           |  68 ++++++++++
+ src/modules/strength/Strength.css             |  13 +-
+ src/modules/strength/Strength.tsx             | 120 ++++++++++--------
+ .../supplementation/Supplementation.css       |  14 ++
+ .../supplementation/Supplementation.tsx       |  67 ++++++++++
+ src/modules/wellness/Wellness.css             |  14 ++
+ src/modules/wellness/Wellness.tsx             |  66 ++++++++++
+ src/modules/wellness/index.ts                 |   1 +
+ 15 files changed, 538 insertions(+), 95 deletions(-)
+ create mode 100644 src/modules/goals/Goals.tsx
+ create mode 100644 src/modules/goals/index.ts
+ create mode 100644 src/modules/nutrition/Nutrition.tsx
+ create mode 100644 src/modules/nutrition/index.ts
+ create mode 100644 src/modules/resources/Resources.css
+ create mode 100644 src/modules/resources/Resources.tsx
+ create mode 100644 src/modules/supplementation/Supplementation.css
+ create mode 100644 src/modules/supplementation/Supplementation.tsx
+ create mode 100644 src/modules/wellness/Wellness.css
+ create mode 100644 src/modules/wellness/Wellness.tsx
+ create mode 100644 src/modules/wellness/index.ts
+
+diff --git a/src/modules/cardio/Cardio.css b/src/modules/cardio/Cardio.css
+index ca0079f5..f5539bcb 100644
+--- a/src/modules/cardio/Cardio.css
++++ b/src/modules/cardio/Cardio.css
+@@ -66,4 +66,22 @@
+ .method-name {
+   font-size: 1.1rem;
+   font-weight: 500;
++}
++
++.cardio-focus-item {
++  transition: color 0.3s ease, transform 0.3s ease;
++  cursor: pointer;
++  padding: 5px 10px;
++  border-radius: 4px;
++  background: none;
++  border: none;
++  color: inherit;
++  font: inherit;
++  text-align: center;
++}
++
++.cardio-focus-item:hover {
++  color: #FF6B6B;
++  transform: translateY(-2px);
++  background: rgba(255, 107, 107, 0.1);
+ } 
+\ No newline at end of file
+diff --git a/src/modules/cardio/Cardio.tsx b/src/modules/cardio/Cardio.tsx
+index 84a37397..44f7cbd2 100644
+--- a/src/modules/cardio/Cardio.tsx
++++ b/src/modules/cardio/Cardio.tsx
+@@ -1,55 +1,84 @@
+ import React from 'react';
+ import { useNavigate } from 'react-router-dom';
+-import { FaRunning, FaBicycle, FaSwimmer, FaFire, FaDumbbell, FaWalking } from 'react-icons/fa';
++import '../../../GoogleDocViewer.css';
++import { GiHeartBeats } from 'react-icons/gi';
+ import './Cardio.css';
+ 
+ const Cardio: React.FC = () => {
+   const navigate = useNavigate();
+ 
+   const trainingMethods = [
+-    { name: 'Running', path: '/cardio/running', icon: <FaRunning /> },
+-    { name: 'Cycling', path: '/cardio/cycling', icon: <FaBicycle /> },
+-    { name: 'Swimming', path: '/cardio/swimming', icon: <FaSwimmer /> },
+-    { name: 'HIIT', path: '/cardio/hiit', icon: <FaFire /> },
+-    { name: 'Jump Rope', path: '/cardio/jump-rope', icon: <FaDumbbell /> },
+-    { name: 'Walking', path: '/cardio/walking', icon: <FaWalking /> },
+-    { name: 'Cardio Machines', path: '/cardio/machines', icon: <FaDumbbell /> }
++    { name: 'Running', path: '/cardio/running' },
++    { name: 'Cycling', path: '/cardio/cycling' },
++    { name: 'Swimming', path: '/cardio/swimming' },
++    { name: 'HIIT', path: '/cardio/hiit' },
++    { name: 'Jump Rope', path: '/cardio/jump-rope' },
++    { name: 'Walking', path: '/cardio/walking' },
++    { name: 'Machines', path: '/cardio/machines' }
+   ];
+ 
+   return (
+-    <div className="cardio-container">
+-      <h1>Cardio Training Methods</h1>
+-      <div className="cardio-description">
+-        <p>Cardiovascular training is essential for improving heart health, endurance, and overall fitness. 
+-           Explore different cardio methods to find what works best for you.</p>
++    <div className="doc-container">
++      <h2 style={{ color: '#FF6B6B' }}>Cardiovascular Training</h2>
++      <div style={{ textAlign: 'center', marginTop: '-15px', marginBottom: '15px' }}>
++        <GiHeartBeats 
++          style={{ 
++            fontSize: '2.5rem',
++            color: '#FF6B6B',
++            transition: 'all 0.3s ease'
++          }}
++        />
++        <p style={{
++          color: '#FF8B8B',
++          fontSize: '1.2rem',
++          marginTop: '8px',
++          marginBottom: '0',
++          fontStyle: 'italic'
++        }}>Elevate your endurance and heart health.</p>
+       </div>
+-      
+-      <div className="cardio-benefits">
+-        <h2>Benefits of Cardio Training</h2>
+-        <ul>
+-          <li>Improved heart health and circulation</li>
+-          <li>Increased endurance and stamina</li>
+-          <li>Weight management and fat loss</li>
+-          <li>Stress reduction and mood improvement</li>
+-          <li>Better sleep quality</li>
+-          <li>Enhanced recovery ability</li>
+-        </ul>
+-      </div>
+-
+-      <div className="cardio-methods">
+-        <h2>Training Methods</h2>
+-        <div className="methods-grid">
+-          {trainingMethods.map((method) => (
+-            <button
+-              key={method.name}
+-              className="method-button"
+-              onClick={() => navigate(method.path)}
+-            >
+-              <span className="method-icon">{method.icon}</span>
+-              <span className="method-name">{method.name}</span>
+-            </button>
+-          ))}
++      <div className="content-section" style={{ background: 'rgba(255, 107, 107, 0.1)' }}>
++        <div className="emphasis-box" style={{ borderLeft: '4px solid #FF6B6B' }}>
++          <h4 style={{ fontSize: '1.3rem', color: '#FF6B6B' }}>Training Benefits</h4>
++          <ul style={{ color: '#FF8B8B' }}>
++            <li><strong style={{ color: '#FF6B6B' }}>Endurance:</strong> Build stamina and cardiovascular fitness.</li>
++            <li><strong style={{ color: '#FF6B6B' }}>Heart Health:</strong> Improve cardiovascular function and efficiency.</li>
++            <li><strong style={{ color: '#FF6B6B' }}>Fat Loss:</strong> Optimize calorie burn and metabolism.</li>
++            <li><strong style={{ color: '#FF6B6B' }}>Recovery:</strong> Active recovery and conditioning techniques.</li>
++          </ul>
+         </div>
++
++        <section className="tools-section">
++          <div className="tool-category">
++            <h4 style={{ fontSize: '1.3rem', color: '#FF6B6B' }}>Training Methods</h4>
++            <div style={{ 
++              fontSize: '1.1em', 
++              display: 'flex', 
++              gap: '1.5rem', 
++              justifyContent: 'center', 
++              flexWrap: 'wrap',
++              color: '#FF8B8B'
++            }}>
++              {trainingMethods.map((method) => (
++                <button
++                  key={method.path}
++                  className="cardio-focus-item"
++                  onClick={() => navigate(method.path)}
++                  style={{
++                    background: 'none',
++                    border: 'none',
++                    cursor: 'pointer',
++                    padding: '0.5rem 1rem',
++                    color: 'inherit',
++                    font: 'inherit',
++                    textAlign: 'center'
++                  }}
++                >
++                  {method.name}
++                </button>
++              ))}
++            </div>
++          </div>
++        </section>
+       </div>
+     </div>
+   );
+diff --git a/src/modules/goals/Goals.tsx b/src/modules/goals/Goals.tsx
+new file mode 100644
+index 00000000..8c5f806a
+--- /dev/null
++++ b/src/modules/goals/Goals.tsx
+@@ -0,0 +1,73 @@
++import React from 'react';
++import { FaFlag } from 'react-icons/fa';
++import '../../../GoogleDocViewer.css';
++
++const Goals: React.FC = () => {
++  return (
++    <div className="doc-container">
++      <h2>Fitness Goals</h2>
++      <div style={{ textAlign: 'center', marginTop: '-15px', marginBottom: '15px' }}>
++        <FaFlag 
++          style={{ 
++            fontSize: '2rem',
++            color: '#6a1b9a',
++            transition: 'all 0.3s ease'
++          }}
++        />
++        <p style={{
++          color: '#ffffff',
++          fontSize: '1.2rem',
++          marginTop: '8px',
++          marginBottom: '0',
++          fontStyle: 'italic'
++        }}>Transform your fitness aspirations into achievable milestones</p>
++      </div>
++
++      <div className="content-section">
++        <div className="emphasis-box">
++          <h4 style={{ fontSize: '1.3rem' }}>Setting Your Path to Success</h4>
++          <ul>
++            <li><strong>SMART Goals:</strong> Make your goals Specific, Measurable, Achievable, Relevant, and Time-bound</li>
++            <li><strong>Track Progress:</strong> Monitor and celebrate your achievements along the way</li>
++            <li><strong>Stay Adaptable:</strong> Adjust your goals as needed while maintaining forward momentum</li>
++            <li><strong>Be Accountable:</strong> Share your goals and progress with others for support and motivation</li>
++          </ul>
++        </div>
++
++        <section className="tools-section">
++          <div className="tool-category">
++            <h4 style={{ fontSize: '1.3rem' }}>Goal Categories</h4>
++            <div style={{ color: '#9d6be7', fontSize: '1.1em', display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
++              <div className="emphasis-box" style={{ flex: '1 1 250px', margin: '0.5rem' }}>
++                <h4>Strength</h4>
++                <p>Build muscular strength through progressive overload and compound exercises</p>
++              </div>
++              <div className="emphasis-box" style={{ flex: '1 1 250px', margin: '0.5rem' }}>
++                <h4>Weight Management</h4>
++                <p>Set and achieve healthy weight goals through balanced nutrition and exercise</p>
++              </div>
++              <div className="emphasis-box" style={{ flex: '1 1 250px', margin: '0.5rem' }}>
++                <h4>Power</h4>
++                <p>Develop explosive strength and speed through dynamic training</p>
++              </div>
++              <div className="emphasis-box" style={{ flex: '1 1 250px', margin: '0.5rem' }}>
++                <h4>Endurance</h4>
++                <p>Improve cardiovascular fitness and stamina for longer, stronger performance</p>
++              </div>
++              <div className="emphasis-box" style={{ flex: '1 1 250px', margin: '0.5rem' }}>
++                <h4>Flexibility</h4>
++                <p>Enhance range of motion and mobility through stretching and mobility work</p>
++              </div>
++              <div className="emphasis-box" style={{ flex: '1 1 250px', margin: '0.5rem' }}>
++                <h4>Tactical</h4>
++                <p>Develop functional fitness and agility for real-world movement and performance</p>
++              </div>
++            </div>
++          </div>
++        </section>
++      </div>
++    </div>
++  );
++};
++
++export default Goals; 
+\ No newline at end of file
+diff --git a/src/modules/goals/index.ts b/src/modules/goals/index.ts
+new file mode 100644
+index 00000000..260a0865
+--- /dev/null
++++ b/src/modules/goals/index.ts
+@@ -0,0 +1 @@
++export { default as Goals } from './Goals'; 
+\ No newline at end of file
+diff --git a/src/modules/nutrition/Nutrition.tsx b/src/modules/nutrition/Nutrition.tsx
+new file mode 100644
+index 00000000..bc1fb53b
+--- /dev/null
++++ b/src/modules/nutrition/Nutrition.tsx
+@@ -0,0 +1,56 @@
++import React from 'react';
++import '../../../GoogleDocViewer.css';
++import { FaAppleAlt } from 'react-icons/fa';
++
++const Nutrition: React.FC = () => {
++  return (
++    <div className="doc-container">
++      <h2>Nutrition Planning</h2>
++      <div style={{ textAlign: 'center', marginTop: '-15px', marginBottom: '15px' }}>
++        <FaAppleAlt 
++          style={{ 
++            fontSize: '2rem',
++            color: '#6a1b9a',
++            transition: 'all 0.3s ease'
++          }}
++        />
++        <p style={{
++          color: '#ffffff',
++          fontSize: '1.2rem',
++          marginTop: '8px',
++          marginBottom: '0',
++          fontStyle: 'italic'
++        }}>Fuel your body for optimal performance.</p>
++      </div>
++      <div className="content-section">
++        <div className="emphasis-box">
++          <h4 style={{ fontSize: '1.3rem' }}>Nutritional Focus</h4>
++          <ul>
++            <li><strong>Macronutrients:</strong> Balance proteins, carbs, and healthy fats.</li>
++            <li><strong>Meal Timing:</strong> Optimize pre and post-workout nutrition.</li>
++            <li><strong>Portion Control:</strong> Learn proper serving sizes and caloric needs.</li>
++            <li><strong>Meal Planning:</strong> Structured meal prep for consistent results.</li>
++          </ul>
++        </div>
++
++        <section className="tools-section">
++          <div className="tool-category">
++            <h4 style={{ fontSize: '1.3rem' }}>Key Components</h4>
++            <div style={{ color: '#9d6be7', fontSize: '1.1em', display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
++              <span>Proteins</span>
++              <span>Carbs</span>
++              <span>Fats</span>
++              <span>Hydration</span>
++              <span>Vitamins</span>
++              <span>Minerals</span>
++              <span>Timing</span>
++              <span>Planning</span>
++            </div>
++          </div>
++        </section>
++      </div>
++    </div>
++  );
++};
++
++export default Nutrition; 
+\ No newline at end of file
+diff --git a/src/modules/nutrition/index.ts b/src/modules/nutrition/index.ts
+new file mode 100644
+index 00000000..bc811672
+--- /dev/null
++++ b/src/modules/nutrition/index.ts
+@@ -0,0 +1 @@
++export { default as Nutrition } from './Nutrition'; 
+\ No newline at end of file
+diff --git a/src/modules/resources/Resources.css b/src/modules/resources/Resources.css
+new file mode 100644
+index 00000000..b817ad04
+--- /dev/null
++++ b/src/modules/resources/Resources.css
+@@ -0,0 +1,14 @@
++.resource-focus-item {
++  transition: all 0.3s ease;
++  cursor: pointer;
++  padding: 0.5rem 1rem;
++  border-radius: 20px;
++  background: rgba(76, 175, 80, 0.1);
++  border: 1px solid rgba(76, 175, 80, 0.3);
++}
++
++.resource-focus-item:hover {
++  background: rgba(76, 175, 80, 0.2);
++  transform: translateY(-2px);
++  box-shadow: 0 4px 8px rgba(76, 175, 80, 0.2);
++} 
+\ No newline at end of file
+diff --git a/src/modules/resources/Resources.tsx b/src/modules/resources/Resources.tsx
+new file mode 100644
+index 00000000..d87834d1
+--- /dev/null
++++ b/src/modules/resources/Resources.tsx
+@@ -0,0 +1,68 @@
++import React from 'react';
++import '../../../GoogleDocViewer.css';
++import { FaBook } from 'react-icons/fa';
++import './Resources.css';
++
++const Resources: React.FC = () => {
++  return (
++    <div className="doc-container">
++      <h2 style={{ color: '#4CAF50' }}>Resources</h2>
++      <div style={{ textAlign: 'center', marginTop: '-15px', marginBottom: '15px' }}>
++        <FaBook 
++          style={{ 
++            fontSize: '2.5rem',
++            color: '#4CAF50',
++            transition: 'all 0.3s ease'
++          }}
++        />
++        <p style={{
++          color: '#81C784',
++          fontSize: '1.2rem',
++          marginTop: '8px',
++          marginBottom: '0',
++          fontStyle: 'italic'
++        }}>Your comprehensive guide to fitness knowledge.</p>
++      </div>
++      <div className="content-section" style={{ background: 'rgba(76, 175, 80, 0.1)' }}>
++        <div className="emphasis-box" style={{ borderLeft: '4px solid #4CAF50' }}>
++          <h4 style={{ fontSize: '1.3rem', color: '#4CAF50' }}>Learning Resources</h4>
++          <ul style={{ color: '#81C784' }}>
++            <li><strong style={{ color: '#4CAF50' }}>Books:</strong> Essential reading for fitness knowledge.</li>
++            <li><strong style={{ color: '#4CAF50' }}>Articles:</strong> Latest research and fitness trends.</li>
++            <li><strong style={{ color: '#4CAF50' }}>Videos:</strong> Visual guides and tutorials.</li>
++            <li><strong style={{ color: '#4CAF50' }}>Apps:</strong> Digital tools for tracking and planning.</li>
++            <li><strong style={{ color: '#4CAF50' }}>Courses:</strong> Structured learning programs.</li>
++            <li><strong style={{ color: '#4CAF50' }}>Communities:</strong> Support and motivation networks.</li>
++          </ul>
++        </div>
++
++        <section className="tools-section">
++          <div className="tool-category">
++            <h4 style={{ fontSize: '1.3rem', color: '#4CAF50' }}>Resource Categories</h4>
++            <div style={{ 
++              fontSize: '1.1em', 
++              display: 'flex', 
++              gap: '1.5rem', 
++              justifyContent: 'center', 
++              flexWrap: 'wrap',
++              color: '#81C784'
++            }}>
++              <div style={{ width: '100%', display: 'flex', justifyContent: 'center', gap: '1.5rem', marginBottom: '0.5rem' }}>
++                <span className="resource-focus-item">Books</span>
++                <span className="resource-focus-item">Articles</span>
++                <span className="resource-focus-item">Videos</span>
++                <span className="resource-focus-item">Apps</span>
++              </div>
++              <span className="resource-focus-item">Courses</span>
++              <span className="resource-focus-item">Communities</span>
++              <span className="resource-focus-item">Research</span>
++              <span className="resource-focus-item">Tools</span>
++            </div>
++          </div>
++        </section>
++      </div>
++    </div>
++  );
++};
++
++export default Resources; 
+\ No newline at end of file
+diff --git a/src/modules/strength/Strength.css b/src/modules/strength/Strength.css
+index 6de96d49..522341ab 100644
+--- a/src/modules/strength/Strength.css
++++ b/src/modules/strength/Strength.css
+@@ -1,10 +1,19 @@
+ .strength-focus-item {
+-  transition: all 0.3s ease;
++  transition: color 0.3s ease, transform 0.3s ease;
++  cursor: pointer;
++  padding: 5px 10px;
++  border-radius: 4px;
++  background: none;
++  border: none;
++  color: inherit;
++  font: inherit;
++  text-align: center;
+ }
+ 
+ .strength-focus-item:hover {
+   color: #E63946;
+-  transform: scale(1.1);
++  transform: translateY(-2px);
++  background: rgba(230, 57, 70, 0.1);
+ }
+ 
+ .strength-container {
+diff --git a/src/modules/strength/Strength.tsx b/src/modules/strength/Strength.tsx
+index 84933a0e..61bf65fb 100644
+--- a/src/modules/strength/Strength.tsx
++++ b/src/modules/strength/Strength.tsx
+@@ -1,71 +1,83 @@
+ import React from 'react';
+ import { useNavigate } from 'react-router-dom';
+-import { FaDumbbell, FaRunning, FaWeight } from 'react-icons/fa';
+-import { GiWeightLiftingUp, GiMuscleUp, GiGymBag } from 'react-icons/gi';
++import '../../../GoogleDocViewer.css';
++import { GiWeightLiftingUp } from 'react-icons/gi';
+ import './Strength.css';
+ 
+ const Strength: React.FC = () => {
+   const navigate = useNavigate();
+ 
+   const trainingMethods = [
+-    { name: 'Free Weights', path: 'strength/free-weights', icon: <FaDumbbell /> },
+-    { name: 'Olympic Lifting', path: 'strength/olympic-lifting', icon: <GiWeightLiftingUp /> },
+-    { name: 'Machines', path: 'strength/machines', icon: <GiGymBag /> },
+-    { name: 'Calisthenics', path: 'strength/calisthenics', icon: <GiMuscleUp /> },
+-    { name: 'Bodyweight', path: 'strength/bodyweight', icon: <FaRunning /> },
+-    { name: 'Circuit Training', path: 'strength/circuit-training', icon: <FaWeight /> }
++    { name: 'Calisthenics', path: '/strength/calisthenics' },
++    { name: 'Bodyweight', path: '/strength/bodyweight' },
++    { name: 'Free Weights', path: '/strength/free-weights' },
++    { name: 'Olympic Lifting', path: '/strength/olympic-lifting' },
++    { name: 'Machines', path: '/strength/machines' },
++    { name: 'Circuit Training', path: '/strength/circuit-training' }
+   ];
+ 
+-  const handleMethodClick = (path: string) => {
+-    console.log('Navigating to:', path);
+-    navigate(path);
+-  };
+-
+   return (
+-    <div className="strength-container">
+-      <h1>Strength Training Methods</h1>
+-      <div className="strength-description">
+-        <p>Strength training is essential for building muscle, increasing bone density, and improving overall fitness. 
+-           Explore different methods to find what works best for your goals.</p>
+-      </div>
+-      
+-      <div className="strength-benefits">
+-        <h2>Benefits of Strength Training</h2>
+-        <ul>
+-          <li>Builds muscle mass and strength</li>
+-          <li>Increases bone density</li>
+-          <li>Improves joint function and stability</li>
+-          <li>Boosts metabolism</li>
+-          <li>Enhances athletic performance</li>
+-          <li>Reduces risk of injury</li>
+-        </ul>
++    <div className="doc-container">
++      <h2 style={{ color: '#E63946' }}>Strength Training</h2>
++      <div style={{ textAlign: 'center', marginTop: '-15px', marginBottom: '15px' }}>
++        <GiWeightLiftingUp 
++          style={{ 
++            fontSize: '2.5rem',
++            color: '#E63946',
++            transition: 'all 0.3s ease'
++          }}
++        />
++        <p style={{
++          color: '#FF8B8B',
++          fontSize: '1.2rem',
++          marginTop: '8px',
++          marginBottom: '0',
++          fontStyle: 'italic'
++        }}>Build strength, power, and confidence.</p>
+       </div>
++      <div className="content-section" style={{ background: 'rgba(230, 57, 70, 0.1)' }}>
++        <div className="emphasis-box" style={{ borderLeft: '4px solid #E63946' }}>
++          <h4 style={{ fontSize: '1.3rem', color: '#E63946' }}>Training Benefits</h4>
++          <ul style={{ color: '#FF8B8B' }}>
++            <li><strong style={{ color: '#E63946' }}>Muscle Growth:</strong> Progressive overload techniques for hypertrophy.</li>
++            <li><strong style={{ color: '#E63946' }}>Power Development:</strong> Compound movements for overall strength gains.</li>
++            <li><strong style={{ color: '#E63946' }}>Form Mastery:</strong> Proper technique for injury prevention and efficiency.</li>
++            <li><strong style={{ color: '#E63946' }}>Program Design:</strong> Structured workouts for consistent progress.</li>
++          </ul>
++        </div>
+ 
+-      <div className="strength-methods">
+-        <h2>Training Methods</h2>
+-        <div className="methods-grid">
+-          {trainingMethods.map((method) => (
+-            <div
+-              key={method.name}
+-              className="method-button"
+-              onClick={() => handleMethodClick(method.path)}
+-              style={{
+-                cursor: 'pointer',
+-                padding: '20px',
+-                border: '1px solid #ccc',
+-                borderRadius: '8px',
+-                textAlign: 'center',
+-                backgroundColor: '#f5f5f5',
+-                transition: 'background-color 0.2s'
+-              }}
+-              onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#e0e0e0'}
+-              onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#f5f5f5'}
+-            >
+-              <span className="method-icon">{method.icon}</span>
+-              <span className="method-name">{method.name}</span>
++        <section className="tools-section">
++          <div className="tool-category">
++            <h4 style={{ fontSize: '1.3rem', color: '#E63946' }}>Training Methods</h4>
++            <div style={{ 
++              fontSize: '1.1em', 
++              display: 'flex', 
++              gap: '1.5rem', 
++              justifyContent: 'center', 
++              flexWrap: 'wrap',
++              color: '#FF8B8B'
++            }}>
++              {trainingMethods.map((method) => (
++                <button
++                  key={method.path}
++                  className="strength-focus-item"
++                  onClick={() => navigate(method.path)}
++                  style={{
++                    background: 'none',
++                    border: 'none',
++                    cursor: 'pointer',
++                    padding: '0.5rem 1rem',
++                    color: 'inherit',
++                    font: 'inherit',
++                    textAlign: 'center'
++                  }}
++                >
++                  {method.name}
++                </button>
++              ))}
+             </div>
+-          ))}
+-        </div>
++          </div>
++        </section>
+       </div>
+     </div>
+   );
+diff --git a/src/modules/supplementation/Supplementation.css b/src/modules/supplementation/Supplementation.css
+new file mode 100644
+index 00000000..3fd7d4da
+--- /dev/null
++++ b/src/modules/supplementation/Supplementation.css
+@@ -0,0 +1,14 @@
++.supplement-focus-item {
++  transition: all 0.3s ease;
++  cursor: pointer;
++  padding: 0.5rem 1rem;
++  border-radius: 20px;
++  background: rgba(255, 152, 0, 0.1);
++  border: 1px solid rgba(255, 152, 0, 0.3);
++}
++
++.supplement-focus-item:hover {
++  background: rgba(255, 152, 0, 0.2);
++  transform: translateY(-2px);
++  box-shadow: 0 4px 8px rgba(255, 152, 0, 0.2);
++} 
+\ No newline at end of file
+diff --git a/src/modules/supplementation/Supplementation.tsx b/src/modules/supplementation/Supplementation.tsx
+new file mode 100644
+index 00000000..99b6d72e
+--- /dev/null
++++ b/src/modules/supplementation/Supplementation.tsx
+@@ -0,0 +1,67 @@
++import React from 'react';
++import '../../../GoogleDocViewer.css';
++import { FaCapsules } from 'react-icons/fa';
++
++const Supplementation: React.FC = () => {
++  return (
++    <div className="doc-container">
++      <h2 style={{ color: '#FF9800' }}>Supplementation</h2>
++      <div style={{ textAlign: 'center', marginTop: '-15px', marginBottom: '15px' }}>
++        <FaCapsules 
++          style={{ 
++            fontSize: '2.5rem',
++            color: '#FF9800',
++            transition: 'all 0.3s ease'
++          }}
++        />
++        <p style={{
++          color: '#FFB74D',
++          fontSize: '1.2rem',
++          marginTop: '8px',
++          marginBottom: '0',
++          fontStyle: 'italic'
++        }}>Enhance your performance safely and effectively.</p>
++      </div>
++      <div className="content-section" style={{ background: 'rgba(255, 152, 0, 0.1)' }}>
++        <div className="emphasis-box" style={{ borderLeft: '4px solid #FF9800' }}>
++          <h4 style={{ fontSize: '1.3rem', color: '#FF9800' }}>Key Supplements</h4>
++          <ul style={{ color: '#FFB74D' }}>
++            <li><strong style={{ color: '#FF9800' }}>Protein:</strong> Essential for muscle repair and growth.</li>
++            <li><strong style={{ color: '#FF9800' }}>Creatine:</strong> Improves strength and power output.</li>
++            <li><strong style={{ color: '#FF9800' }}>BCAAs:</strong> Supports muscle recovery and reduces fatigue.</li>
++            <li><strong style={{ color: '#FF9800' }}>Pre-Workout:</strong> Enhances energy and focus during training.</li>
++            <li><strong style={{ color: '#FF9800' }}>Multivitamins:</strong> Ensures optimal nutrient intake.</li>
++            <li><strong style={{ color: '#FF9800' }}>Omega-3:</strong> Supports joint health and recovery.</li>
++          </ul>
++        </div>
++
++        <section className="tools-section">
++          <div className="tool-category">
++            <h4 style={{ fontSize: '1.3rem', color: '#FF9800' }}>Supplement Categories</h4>
++            <div style={{ 
++              fontSize: '1.1em', 
++              display: 'flex', 
++              gap: '1.5rem', 
++              justifyContent: 'center', 
++              flexWrap: 'wrap',
++              color: '#FFB74D'
++            }}>
++              <div style={{ width: '100%', display: 'flex', justifyContent: 'center', gap: '1.5rem', marginBottom: '0.5rem' }}>
++                <span className="supplement-focus-item">Protein</span>
++                <span className="supplement-focus-item">Creatine</span>
++                <span className="supplement-focus-item">BCAAs</span>
++                <span className="supplement-focus-item">Pre-Workout</span>
++              </div>
++              <span className="supplement-focus-item">Vitamins</span>
++              <span className="supplement-focus-item">Minerals</span>
++              <span className="supplement-focus-item">Amino Acids</span>
++              <span className="supplement-focus-item">Herbs</span>
++            </div>
++          </div>
++        </section>
++      </div>
++    </div>
++  );
++};
++
++export default Supplementation; 
+\ No newline at end of file
+diff --git a/src/modules/wellness/Wellness.css b/src/modules/wellness/Wellness.css
+new file mode 100644
+index 00000000..e1cca1f4
+--- /dev/null
++++ b/src/modules/wellness/Wellness.css
+@@ -0,0 +1,14 @@
++.wellness-focus-item {
++  transition: all 0.3s ease;
++  cursor: pointer;
++  padding: 0.5rem 1rem;
++  border-radius: 20px;
++  background: rgba(74, 190, 217, 0.1);
++  border: 1px solid rgba(74, 190, 217, 0.3);
++}
++
++.wellness-focus-item:hover {
++  background: rgba(74, 190, 217, 0.2);
++  transform: translateY(-2px);
++  box-shadow: 0 4px 8px rgba(74, 190, 217, 0.2);
++} 
+\ No newline at end of file
+diff --git a/src/modules/wellness/Wellness.tsx b/src/modules/wellness/Wellness.tsx
+new file mode 100644
+index 00000000..47d9ea88
+--- /dev/null
++++ b/src/modules/wellness/Wellness.tsx
+@@ -0,0 +1,66 @@
++import React from 'react';
++import '../../../GoogleDocViewer.css';
++import { FaSpa } from 'react-icons/fa';
++import './Wellness.css';
++
++const Wellness: React.FC = () => {
++  return (
++    <div className="doc-container">
++      <h2 style={{ color: '#4ABED9' }}>Wellness</h2>
++      <div style={{ textAlign: 'center', marginTop: '-15px', marginBottom: '15px' }}>
++        <FaSpa 
++          style={{ 
++            fontSize: '2.5rem',
++            color: '#4ABED9',
++            transition: 'all 0.3s ease'
++          }}
++        />
++        <p style={{
++          color: '#7CD5ED',
++          fontSize: '1.2rem',
++          marginTop: '8px',
++          marginBottom: '0',
++          fontStyle: 'italic'
++        }}>Mind, body, and spirit in harmony.</p>
++      </div>
++      <div className="content-section" style={{ background: 'rgba(74, 190, 217, 0.1)' }}>
++        <div className="emphasis-box" style={{ borderLeft: '4px solid #4ABED9' }}>
++          <h4 style={{ fontSize: '1.3rem', color: '#4ABED9' }}>Holistic Benefits</h4>
++          <ul style={{ color: '#7CD5ED' }}>
++            <li><strong style={{ color: '#4ABED9' }}>Mental Clarity:</strong> Practice mindfulness and meditation for improved focus and reduced stress.</li>
++            <li><strong style={{ color: '#4ABED9' }}>Recovery:</strong> Learn proper rest and recovery techniques for optimal performance.</li>
++            <li><strong style={{ color: '#4ABED9' }}>Sleep Quality:</strong> Develop healthy sleep habits for better recovery and energy levels.</li>
++            <li><strong style={{ color: '#4ABED9' }}>Stress Management:</strong> Implement strategies to balance fitness goals with overall wellbeing.</li>
++          </ul>
++        </div>
++
++        <section className="tools-section">
++          <div className="tool-category">
++            <h4 style={{ fontSize: '1.3rem', color: '#4ABED9' }}>Focus Areas</h4>
++            <div style={{ 
++              fontSize: '1.1em', 
++              display: 'flex', 
++              gap: '1.5rem', 
++              justifyContent: 'center', 
++              flexWrap: 'wrap',
++              color: '#7CD5ED'
++            }}>
++              <div style={{ width: '100%', display: 'flex', justifyContent: 'center', gap: '1.5rem', marginBottom: '0.5rem' }}>
++                <span className="wellness-focus-item">Meditation</span>
++                <span className="wellness-focus-item">Ice Bath</span>
++                <span className="wellness-focus-item">Breathing</span>
++                <span className="wellness-focus-item">Yoga</span>
++              </div>
++              <span className="wellness-focus-item">Massage</span>
++              <span className="wellness-focus-item">Recovery</span>
++              <span className="wellness-focus-item">Sleep</span>
++              <span className="wellness-focus-item">Balance</span>
++            </div>
++          </div>
++        </section>
++      </div>
++    </div>
++  );
++};
++
++export default Wellness; 
+\ No newline at end of file
+diff --git a/src/modules/wellness/index.ts b/src/modules/wellness/index.ts
+new file mode 100644
+index 00000000..a9792ffb
+--- /dev/null
++++ b/src/modules/wellness/index.ts
+@@ -0,0 +1 @@
++export { default as Wellness } from './Wellness'; 
+\ No newline at end of file
+-- 
+2.48.1
+
+
+From 663f80917f6f908a28d7ecda109369c104dfd1ca Mon Sep 17 00:00:00 2001
+From: jqohayon <jqohayon@gmail.com>
+Date: Thu, 27 Mar 2025 21:54:37 -0400
+Subject: [PATCH 4/4] fix: update import paths and restore component styles
+
+---
+ src/App.tsx                          | 51 ++++------------------------
+ src/modules/cardio/Cardio.tsx        |  2 +-
+ src/modules/goals/Goals.tsx          |  2 +-
+ src/modules/nutrition/Nutrition.tsx  |  2 +-
+ src/modules/resources/index.ts       |  1 +
+ src/modules/strength/Strength.tsx    |  2 +-
+ src/modules/supplementation/index.ts |  1 +
+ src/modules/wellness/Wellness.tsx    |  2 +-
+ 8 files changed, 13 insertions(+), 50 deletions(-)
+ create mode 100644 src/modules/resources/index.ts
+ create mode 100644 src/modules/supplementation/index.ts
+
+diff --git a/src/App.tsx b/src/App.tsx
+index 7bcba101..8d75d96c 100644
+--- a/src/App.tsx
++++ b/src/App.tsx
+@@ -16,52 +16,13 @@ import {
+   Machines,
+   CircuitTraining
+ } from './modules/strength';
+-
+-// Import other modules (to be created)
+ import { Cardio } from './modules/cardio';
+-
+-// Placeholder components for unimplemented sections
+-const Nutrition: React.FC = () => (
+-  <div className="training-method-container">
+-    <h1>Nutrition</h1>
+-    <p>Coming soon! This section will provide comprehensive information about nutrition and diet.</p>
+-  </div>
+-);
+-
+-const Wellness: React.FC = () => (
+-  <div className="training-method-container">
+-    <h1>Wellness</h1>
+-    <p>Coming soon! This section will cover mental and physical wellness practices.</p>
+-  </div>
+-);
+-
+-const Supplementation: React.FC = () => (
+-  <div className="training-method-container">
+-    <h1>Supplementation</h1>
+-    <p>Coming soon! This section will provide information about supplements and their proper use.</p>
+-  </div>
+-);
+-
+-const Goals: React.FC = () => (
+-  <div className="training-method-container">
+-    <h1>Goals</h1>
+-    <p>Coming soon! This section will help you set and track your fitness goals.</p>
+-  </div>
+-);
+-
+-const Resources: React.FC = () => (
+-  <div className="training-method-container">
+-    <h1>Resources</h1>
+-    <p>Coming soon! This section will provide additional resources and references.</p>
+-  </div>
+-);
+-
+-const Contributions: React.FC = () => (
+-  <div className="training-method-container">
+-    <h1>Contributions</h1>
+-    <p>Coming soon! This section will provide information about contributing to the project.</p>
+-  </div>
+-);
++import { Nutrition } from './modules/nutrition';
++import { Wellness } from './modules/wellness';
++import { Supplementation } from './modules/supplementation';
++import { Goals } from './modules/goals';
++import { Resources } from './modules/resources';
++import Contributions from './components/career/Contributions';
+ 
+ const App: React.FC = () => {
+   return (
+diff --git a/src/modules/cardio/Cardio.tsx b/src/modules/cardio/Cardio.tsx
+index 44f7cbd2..d905b040 100644
+--- a/src/modules/cardio/Cardio.tsx
++++ b/src/modules/cardio/Cardio.tsx
+@@ -1,6 +1,6 @@
+ import React from 'react';
+ import { useNavigate } from 'react-router-dom';
+-import '../../../GoogleDocViewer.css';
++import '../../GoogleDocViewer.css';
+ import { GiHeartBeats } from 'react-icons/gi';
+ import './Cardio.css';
+ 
+diff --git a/src/modules/goals/Goals.tsx b/src/modules/goals/Goals.tsx
+index 8c5f806a..6f5783f6 100644
+--- a/src/modules/goals/Goals.tsx
++++ b/src/modules/goals/Goals.tsx
+@@ -1,6 +1,6 @@
+ import React from 'react';
+ import { FaFlag } from 'react-icons/fa';
+-import '../../../GoogleDocViewer.css';
++import '../../GoogleDocViewer.css';
+ 
+ const Goals: React.FC = () => {
+   return (
+diff --git a/src/modules/nutrition/Nutrition.tsx b/src/modules/nutrition/Nutrition.tsx
+index bc1fb53b..95734387 100644
+--- a/src/modules/nutrition/Nutrition.tsx
++++ b/src/modules/nutrition/Nutrition.tsx
+@@ -1,5 +1,5 @@
+ import React from 'react';
+-import '../../../GoogleDocViewer.css';
++import '../../GoogleDocViewer.css';
+ import { FaAppleAlt } from 'react-icons/fa';
+ 
+ const Nutrition: React.FC = () => {
+diff --git a/src/modules/resources/index.ts b/src/modules/resources/index.ts
+new file mode 100644
+index 00000000..60ecfabe
+--- /dev/null
++++ b/src/modules/resources/index.ts
+@@ -0,0 +1 @@
++export { default as Resources } from './Resources'; 
+\ No newline at end of file
+diff --git a/src/modules/strength/Strength.tsx b/src/modules/strength/Strength.tsx
+index 61bf65fb..7016db83 100644
+--- a/src/modules/strength/Strength.tsx
++++ b/src/modules/strength/Strength.tsx
+@@ -1,6 +1,6 @@
+ import React from 'react';
+ import { useNavigate } from 'react-router-dom';
+-import '../../../GoogleDocViewer.css';
++import '../../GoogleDocViewer.css';
+ import { GiWeightLiftingUp } from 'react-icons/gi';
+ import './Strength.css';
+ 
+diff --git a/src/modules/supplementation/index.ts b/src/modules/supplementation/index.ts
+new file mode 100644
+index 00000000..0c4d4677
+--- /dev/null
++++ b/src/modules/supplementation/index.ts
+@@ -0,0 +1 @@
++export { default as Supplementation } from './Supplementation'; 
+\ No newline at end of file
+diff --git a/src/modules/wellness/Wellness.tsx b/src/modules/wellness/Wellness.tsx
+index 47d9ea88..7d41a11f 100644
+--- a/src/modules/wellness/Wellness.tsx
++++ b/src/modules/wellness/Wellness.tsx
+@@ -1,5 +1,5 @@
+ import React from 'react';
+-import '../../../GoogleDocViewer.css';
++import '../../GoogleDocViewer.css';
+ import { FaSpa } from 'react-icons/fa';
+ import './Wellness.css';
+ 
+-- 
+2.48.1
+
