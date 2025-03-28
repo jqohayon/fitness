@@ -1,6 +1,7 @@
 import React from 'react';
-import { FaFlag } from 'react-icons/fa';
 import '../../GoogleDocViewer.css';
+import { FaFlag } from 'react-icons/fa';
+import './Goals.css';
 
 const Goals: React.FC = () => {
   return (

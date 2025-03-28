@@ -1,6 +1,7 @@
 import React from 'react';
-import '../../../GoogleDocViewer.css';
+import '../../GoogleDocViewer.css';
 import { FaCapsules } from 'react-icons/fa';
+import './Supplementation.css';
 
 const Supplementation: React.FC = () => {
   return (

@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../GoogleDocViewer.css';
 import { FaAppleAlt } from 'react-icons/fa';
+import './Nutrition.css';
 
 const Nutrition: React.FC = () => {
   return (
