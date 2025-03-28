@@ -16,14 +16,13 @@ import {
   Machines,
   CircuitTraining
 } from './modules/strength';
-
-// Import other modules (to be created)
 import { Cardio } from './modules/cardio';
-
-// Test component
-const TestComponent: React.FC = () => {
-  return <div>Test Route Working!</div>;
-};
+import { Nutrition } from './modules/nutrition';
+import { Wellness } from './modules/wellness';
+import { Supplementation } from './modules/supplementation';
+import { Goals } from './modules/goals';
+import { Resources } from './modules/resources';
+import Contributions from './components/career/Contributions';
 
 const App: React.FC = () => {
   return (
@@ -33,9 +32,14 @@ const App: React.FC = () => {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/test" element={<TestComponent />} />
           <Route path="/strength" element={<Strength />} />
           <Route path="/cardio" element={<Cardio />} />
+          <Route path="/nutrition" element={<Nutrition />} />
+          <Route path="/wellness" element={<Wellness />} />
+          <Route path="/supplementation" element={<Supplementation />} />
+          <Route path="/goals" element={<Goals />} />
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/contributions" element={<Contributions />} />
           
           {/* Strength Training Routes */}
           <Route path="/strength/calisthenics" element={<Calisthenics />} />

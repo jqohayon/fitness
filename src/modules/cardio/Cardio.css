@@ -66,4 +66,22 @@
 .method-name {
   font-size: 1.1rem;
   font-weight: 500;
+}
+
+.cardio-focus-item {
+  transition: color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  text-align: center;
+}
+
+.cardio-focus-item:hover {
+  color: #FF6B6B;
+  transform: translateY(-2px);
+  background: rgba(255, 107, 107, 0.1);
 } 
