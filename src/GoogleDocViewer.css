@@ -1,16 +1,19 @@
 .training-method-container {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 2rem auto;
   padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.95);
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
 }
 
 .training-method-container h1 {
   color: #1D3557;
   margin-bottom: 1.5rem;
   text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
 }
 
 .method-icon {
@@ -23,17 +26,23 @@
 .training-method-container h2 {
   color: #1D3557;
   margin: 1.5rem 0 1rem;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
 .training-method-container ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 .training-method-container li {
-  margin: 0.5rem 0;
+  margin: 0.8rem 0;
   padding-left: 1.5rem;
   position: relative;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #2B2D42;
 }
 
 .training-method-container li:before {
@@ -41,4 +50,12 @@
   color: #E63946;
   position: absolute;
   left: 0;
+  font-size: 1.2rem;
+}
+
+.training-method-container p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #2B2D42;
+  margin-bottom: 1.5rem;
 } 
