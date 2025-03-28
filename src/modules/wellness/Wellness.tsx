@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../GoogleDocViewer.css';
+import '../../GoogleDocViewer.css';
 import { FaSpa } from 'react-icons/fa';
 import './Wellness.css';
 

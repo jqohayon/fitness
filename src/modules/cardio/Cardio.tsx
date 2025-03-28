@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../../../GoogleDocViewer.css';
+import '../../GoogleDocViewer.css';
 import { GiHeartBeats } from 'react-icons/gi';
 import './Cardio.css';
 

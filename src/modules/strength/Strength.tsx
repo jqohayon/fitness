@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../../../GoogleDocViewer.css';
+import '../../GoogleDocViewer.css';
 import { GiWeightLiftingUp } from 'react-icons/gi';
 import './Strength.css';
 

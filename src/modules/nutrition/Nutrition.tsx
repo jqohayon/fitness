@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../GoogleDocViewer.css';
+import '../../GoogleDocViewer.css';
 import { FaAppleAlt } from 'react-icons/fa';
 
 const Nutrition: React.FC = () => {

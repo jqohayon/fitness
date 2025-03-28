@@ -16,52 +16,13 @@ import {
   Machines,
   CircuitTraining
 } from './modules/strength';
-
-// Import other modules (to be created)
 import { Cardio } from './modules/cardio';
-
-// Placeholder components for unimplemented sections
-const Nutrition: React.FC = () => (
-  <div className="training-method-container">
-    <h1>Nutrition</h1>
-    <p>Coming soon! This section will provide comprehensive information about nutrition and diet.</p>
-  </div>
-);
-
-const Wellness: React.FC = () => (
-  <div className="training-method-container">
-    <h1>Wellness</h1>
-    <p>Coming soon! This section will cover mental and physical wellness practices.</p>
-  </div>
-);
-
-const Supplementation: React.FC = () => (
-  <div className="training-method-container">
-    <h1>Supplementation</h1>
-    <p>Coming soon! This section will provide information about supplements and their proper use.</p>
-  </div>
-);
-
-const Goals: React.FC = () => (
-  <div className="training-method-container">
-    <h1>Goals</h1>
-    <p>Coming soon! This section will help you set and track your fitness goals.</p>
-  </div>
-);
-
-const Resources: React.FC = () => (
-  <div className="training-method-container">
-    <h1>Resources</h1>
-    <p>Coming soon! This section will provide additional resources and references.</p>
-  </div>
-);
-
-const Contributions: React.FC = () => (
-  <div className="training-method-container">
-    <h1>Contributions</h1>
-    <p>Coming soon! This section will provide information about contributing to the project.</p>
-  </div>
-);
+import { Nutrition } from './modules/nutrition';
+import { Wellness } from './modules/wellness';
+import { Supplementation } from './modules/supplementation';
+import { Goals } from './modules/goals';
+import { Resources } from './modules/resources';
+import Contributions from './components/career/Contributions';
 
 const App: React.FC = () => {
   return (
