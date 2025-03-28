@@ -8,6 +8,11 @@
   margin: 0 auto;
   text-align: center;
   font-family: 'Poppins', sans-serif;
+  background: rgba(20, 17, 35, 0.7);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .strength-container h2 {
@@ -42,6 +47,7 @@
   font-size: 1.2rem;
   margin: 1rem 0 2rem;
   font-family: 'Poppins', sans-serif;
+  opacity: 0.9;
 }
 
 .content-grid {
@@ -58,6 +64,8 @@
   padding: 1.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .content-card:hover {
@@ -70,6 +78,25 @@
   font-size: 1.3rem;
   margin-bottom: 1rem;
   font-family: 'Poppins', sans-serif;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.content-card ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  color: #FF8B8B;
+  font-family: 'Poppins', sans-serif;
+}
+
+.content-card ul li {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+.content-card ul li strong {
+  color: #E63946;
+  font-weight: 600;
 }
 
 .training-methods {
@@ -89,6 +116,8 @@
   color: #FF8B8B;
   font-family: 'Poppins', sans-serif;
   font-size: 1.1rem;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 .strength-focus-item:hover {
@@ -96,6 +125,7 @@
   transform: translateY(-2px);
   border-color: #E63946;
   background: rgba(230, 57, 70, 0.15);
+  box-shadow: 0 4px 12px rgba(230, 57, 70, 0.2);
 }
 
 /* Enhanced Mobile Responsiveness */
