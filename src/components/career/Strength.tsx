@@ -17,67 +17,37 @@ const Strength: React.FC = () => {
   ];
 
   return (
-    <div className="doc-container">
-      <h2 style={{ color: '#E63946' }}>Strength Training</h2>
-      <div style={{ textAlign: 'center', marginTop: '-15px', marginBottom: '15px' }}>
-        <GiWeightLiftingUp 
-          style={{ 
-            fontSize: '2.5rem',
-            color: '#E63946',
-            transition: 'all 0.3s ease'
-          }}
-        />
-        <p style={{
-          color: '#FF8B8B',
-          fontSize: '1.2rem',
-          marginTop: '8px',
-          marginBottom: '0',
-          fontStyle: 'italic'
-        }}>Build strength, power, and confidence.</p>
-      </div>
-      <div className="content-section" style={{ background: 'rgba(230, 57, 70, 0.1)' }}>
-        <div className="emphasis-box" style={{ borderLeft: '4px solid #E63946' }}>
-          <h4 style={{ fontSize: '1.3rem', color: '#E63946' }}>Training Benefits</h4>
-          <ul style={{ color: '#FF8B8B' }}>
-            <li><strong style={{ color: '#E63946' }}>Muscle Growth:</strong> Progressive overload techniques for hypertrophy.</li>
-            <li><strong style={{ color: '#E63946' }}>Power Development:</strong> Compound movements for overall strength gains.</li>
-            <li><strong style={{ color: '#E63946' }}>Form Mastery:</strong> Proper technique for injury prevention and efficiency.</li>
-            <li><strong style={{ color: '#E63946' }}>Program Design:</strong> Structured workouts for consistent progress.</li>
+    <div className="strength-container">
+      <h2>Strength Training</h2>
+      <div className="strength-divider" />
+      <GiWeightLiftingUp className="strength-icon" />
+      <p className="strength-quote">Build strength, power, and confidence.</p>
+      
+      <div className="content-grid">
+        <div className="content-card">
+          <h4>Training Benefits</h4>
+          <ul>
+            <li><strong>Muscle Growth:</strong> Progressive overload techniques for hypertrophy.</li>
+            <li><strong>Power Development:</strong> Compound movements for overall strength gains.</li>
+            <li><strong>Form Mastery:</strong> Proper technique for injury prevention and efficiency.</li>
+            <li><strong>Program Design:</strong> Structured workouts for consistent progress.</li>
           </ul>
         </div>
 
-        <section className="tools-section">
-          <div className="tool-category">
-            <h4 style={{ fontSize: '1.3rem', color: '#E63946' }}>Training Methods</h4>
-            <div style={{ 
-              fontSize: '1.1em', 
-              display: 'flex', 
-              gap: '1.5rem', 
-              justifyContent: 'center', 
-              flexWrap: 'wrap',
-              color: '#FF8B8B'
-            }}>
-              {trainingMethods.map((method) => (
-                <button
-                  key={method.path}
-                  className="strength-focus-item"
-                  onClick={() => navigate(method.path)}
-                  style={{
-                    background: 'none',
-                    border: 'none',
-                    cursor: 'pointer',
-                    padding: '0.5rem 1rem',
-                    color: 'inherit',
-                    font: 'inherit',
-                    textAlign: 'center'
-                  }}
-                >
-                  {method.name}
-                </button>
-              ))}
-            </div>
+        <div className="content-card">
+          <h4>Training Methods</h4>
+          <div className="training-methods">
+            {trainingMethods.map((method) => (
+              <button
+                key={method.path}
+                className="strength-focus-item"
+                onClick={() => navigate(method.path)}
+              >
+                {method.name}
+              </button>
+            ))}
           </div>
-        </section>
+        </div>
       </div>
     </div>
   );
