@@ -20,10 +20,48 @@ import {
 // Import other modules (to be created)
 import { Cardio } from './modules/cardio';
 
-// Test component
-const TestComponent: React.FC = () => {
-  return <div>Test Route Working!</div>;
-};
+// Placeholder components for unimplemented sections
+const Nutrition: React.FC = () => (
+  <div className="training-method-container">
+    <h1>Nutrition</h1>
+    <p>Coming soon! This section will provide comprehensive information about nutrition and diet.</p>
+  </div>
+);
+
+const Wellness: React.FC = () => (
+  <div className="training-method-container">
+    <h1>Wellness</h1>
+    <p>Coming soon! This section will cover mental and physical wellness practices.</p>
+  </div>
+);
+
+const Supplementation: React.FC = () => (
+  <div className="training-method-container">
+    <h1>Supplementation</h1>
+    <p>Coming soon! This section will provide information about supplements and their proper use.</p>
+  </div>
+);
+
+const Goals: React.FC = () => (
+  <div className="training-method-container">
+    <h1>Goals</h1>
+    <p>Coming soon! This section will help you set and track your fitness goals.</p>
+  </div>
+);
+
+const Resources: React.FC = () => (
+  <div className="training-method-container">
+    <h1>Resources</h1>
+    <p>Coming soon! This section will provide additional resources and references.</p>
+  </div>
+);
+
+const Contributions: React.FC = () => (
+  <div className="training-method-container">
+    <h1>Contributions</h1>
+    <p>Coming soon! This section will provide information about contributing to the project.</p>
+  </div>
+);
 
 const App: React.FC = () => {
   return (
@@ -33,9 +71,14 @@ const App: React.FC = () => {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/test" element={<TestComponent />} />
           <Route path="/strength" element={<Strength />} />
           <Route path="/cardio" element={<Cardio />} />
+          <Route path="/nutrition" element={<Nutrition />} />
+          <Route path="/wellness" element={<Wellness />} />
+          <Route path="/supplementation" element={<Supplementation />} />
+          <Route path="/goals" element={<Goals />} />
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/contributions" element={<Contributions />} />
           
           {/* Strength Training Routes */}
           <Route path="/strength/calisthenics" element={<Calisthenics />} />
