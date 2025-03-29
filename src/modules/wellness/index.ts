@@ -1,1 +1,0 @@
-export { default as Wellness } from './Wellness'; 
