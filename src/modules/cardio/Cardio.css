@@ -28,7 +28,7 @@
 
 .cardio-benefits li::before {
   content: "•";
-  color: #E63946;
+  color: #6a1b9a;
   position: absolute;
   left: 0;
 }
@@ -46,14 +46,14 @@
   align-items: center;
   padding: 1.5rem;
   background-color: #fff;
-  border: 2px solid #E63946;
+  border: 2px solid #6a1b9a;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .method-button:hover {
-  background-color: #E63946;
+  background-color: #6a1b9a;
   color: #fff;
   transform: translateY(-5px);
 }
@@ -69,19 +69,20 @@
 }
 
 .cardio-focus-item {
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
-  padding: 5px 10px;
-  border-radius: 4px;
-  background: none;
-  border: none;
-  color: inherit;
-  font: inherit;
-  text-align: center;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  background: rgba(106, 27, 154, 0.1);
+  border: 2px solid transparent;
+  color: #9d6be7;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
 }
 
 .cardio-focus-item:hover {
-  color: #FF6B6B;
+  color: #6a1b9a;
   transform: translateY(-2px);
-  background: rgba(255, 107, 107, 0.1);
+  border-color: #6a1b9a;
+  background: rgba(106, 27, 154, 0.15);
 } 

@@ -19,44 +19,55 @@ const Cardio: React.FC = () => {
 
   return (
     <div className="doc-container">
-      <h2 style={{ color: '#FF6B6B' }}>Cardiovascular Training</h2>
+      <h2 style={{ color: '#ffffff' }}>Cardiovascular Training</h2>
       <div style={{ textAlign: 'center', marginTop: '-15px', marginBottom: '15px' }}>
         <GiHeartBeats 
           style={{ 
             fontSize: '2.5rem',
-            color: '#FF6B6B',
+            color: '#ffffff',
             transition: 'all 0.3s ease'
           }}
         />
         <p style={{
-          color: '#FF8B8B',
+          color: '#ffffff',
           fontSize: '1.2rem',
           marginTop: '8px',
           marginBottom: '0',
           fontStyle: 'italic'
         }}>Elevate your endurance and heart health.</p>
       </div>
-      <div className="content-section" style={{ background: 'rgba(255, 107, 107, 0.1)' }}>
-        <div className="emphasis-box" style={{ borderLeft: '4px solid #FF6B6B' }}>
-          <h4 style={{ fontSize: '1.3rem', color: '#FF6B6B' }}>Training Benefits</h4>
-          <ul style={{ color: '#FF8B8B' }}>
-            <li><strong style={{ color: '#FF6B6B' }}>Endurance:</strong> Build stamina and cardiovascular fitness.</li>
-            <li><strong style={{ color: '#FF6B6B' }}>Heart Health:</strong> Improve cardiovascular function and efficiency.</li>
-            <li><strong style={{ color: '#FF6B6B' }}>Fat Loss:</strong> Optimize calorie burn and metabolism.</li>
-            <li><strong style={{ color: '#FF6B6B' }}>Recovery:</strong> Active recovery and conditioning techniques.</li>
+      <div className="content-section" style={{ 
+        background: 'rgba(106, 27, 154, 0.1)',
+        padding: '2rem',
+        borderRadius: '8px',
+        marginTop: '2rem'
+      }}>
+        <div className="emphasis-box" style={{ 
+          borderLeft: '4px solid #6a1b9a',
+          padding: '1.5rem',
+          background: 'rgba(106, 27, 154, 0.05)',
+          borderRadius: '4px',
+          marginBottom: '2rem'
+        }}>
+          <h4 style={{ fontSize: '1.3rem', color: '#6a1b9a', marginBottom: '1rem' }}>Training Benefits</h4>
+          <ul style={{ color: '#9d6be7', margin: 0, paddingLeft: '1rem' }}>
+            <li style={{ marginBottom: '0.75rem' }}><strong style={{ color: '#6a1b9a' }}>Endurance:</strong> Build stamina and cardiovascular fitness.</li>
+            <li style={{ marginBottom: '0.75rem' }}><strong style={{ color: '#6a1b9a' }}>Heart Health:</strong> Improve cardiovascular function and efficiency.</li>
+            <li style={{ marginBottom: '0.75rem' }}><strong style={{ color: '#6a1b9a' }}>Fat Loss:</strong> Optimize calorie burn and metabolism.</li>
+            <li style={{ marginBottom: '0.75rem' }}><strong style={{ color: '#6a1b9a' }}>Recovery:</strong> Active recovery and conditioning techniques.</li>
           </ul>
         </div>
 
         <section className="tools-section">
           <div className="tool-category">
-            <h4 style={{ fontSize: '1.3rem', color: '#FF6B6B' }}>Training Methods</h4>
+            <h4 style={{ fontSize: '1.3rem', color: '#6a1b9a', marginBottom: '1.5rem' }}>Training Methods</h4>
             <div style={{ 
               fontSize: '1.1em', 
               display: 'flex', 
               gap: '1.5rem', 
               justifyContent: 'center', 
               flexWrap: 'wrap',
-              color: '#FF8B8B'
+              color: '#9d6be7'
             }}>
               {trainingMethods.map((method) => (
                 <button
