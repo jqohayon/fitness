@@ -66,7 +66,7 @@ const Strength: React.FC = () => {
               gap: '1.5rem', 
               justifyContent: 'center', 
               flexWrap: 'wrap',
-              color: '#FF8B8B'
+              color: '#9d6be7'
             }}>
               {trainingMethods.map((method) => (
                 <button
