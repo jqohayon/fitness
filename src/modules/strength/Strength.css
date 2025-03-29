@@ -11,9 +11,9 @@
 }
 
 .strength-focus-item:hover {
-  color: #E63946;
+  color: #6a1b9a;
   transform: translateY(-2px);
-  background: rgba(230, 57, 70, 0.1);
+  background: rgba(106, 27, 154, 0.1);
 }
 
 .strength-container {
@@ -46,7 +46,7 @@
 
 .strength-benefits li::before {
   content: "•";
-  color: #E63946;
+  color: #6a1b9a;
   position: absolute;
   left: 0;
 }
@@ -64,14 +64,14 @@
   align-items: center;
   padding: 1.5rem;
   background-color: #fff;
-  border: 2px solid #E63946;
+  border: 2px solid #6a1b9a;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .method-button:hover {
-  background-color: #E63946;
+  background-color: #6a1b9a;
   color: #fff;
   transform: translateY(-5px);
 }

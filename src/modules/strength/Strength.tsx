@@ -18,37 +18,48 @@ const Strength: React.FC = () => {
 
   return (
     <div className="doc-container">
-      <h2 style={{ color: '#E63946' }}>Strength Training</h2>
+      <h2 style={{ color: '#ffffff' }}>Strength Training</h2>
       <div style={{ textAlign: 'center', marginTop: '-15px', marginBottom: '15px' }}>
         <GiWeightLiftingUp 
           style={{ 
             fontSize: '2.5rem',
-            color: '#E63946',
+            color: '#ffffff',
             transition: 'all 0.3s ease'
           }}
         />
         <p style={{
-          color: '#FF8B8B',
+          color: '#ffffff',
           fontSize: '1.2rem',
           marginTop: '8px',
           marginBottom: '0',
           fontStyle: 'italic'
         }}>Build strength, power, and confidence.</p>
       </div>
-      <div className="content-section" style={{ background: 'rgba(230, 57, 70, 0.1)' }}>
-        <div className="emphasis-box" style={{ borderLeft: '4px solid #E63946' }}>
-          <h4 style={{ fontSize: '1.3rem', color: '#E63946' }}>Training Benefits</h4>
-          <ul style={{ color: '#FF8B8B' }}>
-            <li><strong style={{ color: '#E63946' }}>Muscle Growth:</strong> Progressive overload techniques for hypertrophy.</li>
-            <li><strong style={{ color: '#E63946' }}>Power Development:</strong> Compound movements for overall strength gains.</li>
-            <li><strong style={{ color: '#E63946' }}>Form Mastery:</strong> Proper technique for injury prevention and efficiency.</li>
-            <li><strong style={{ color: '#E63946' }}>Program Design:</strong> Structured workouts for consistent progress.</li>
+      <div className="content-section" style={{ 
+        background: 'rgba(106, 27, 154, 0.1)',
+        padding: '2rem',
+        borderRadius: '8px',
+        marginTop: '2rem'
+      }}>
+        <div className="emphasis-box" style={{ 
+          borderLeft: '4px solid #6a1b9a',
+          padding: '1.5rem',
+          background: 'rgba(106, 27, 154, 0.05)',
+          borderRadius: '4px',
+          marginBottom: '2rem'
+        }}>
+          <h4 style={{ fontSize: '1.3rem', color: '#6a1b9a', marginBottom: '1rem' }}>Training Benefits</h4>
+          <ul style={{ color: '#9d6be7', margin: 0, paddingLeft: '1rem' }}>
+            <li style={{ marginBottom: '0.75rem' }}><strong style={{ color: '#6a1b9a' }}>Muscle Growth:</strong> Progressive overload techniques for hypertrophy.</li>
+            <li style={{ marginBottom: '0.75rem' }}><strong style={{ color: '#6a1b9a' }}>Power Development:</strong> Compound movements for overall strength gains.</li>
+            <li style={{ marginBottom: '0.75rem' }}><strong style={{ color: '#6a1b9a' }}>Form Mastery:</strong> Proper technique for injury prevention and efficiency.</li>
+            <li style={{ marginBottom: '0.75rem' }}><strong style={{ color: '#6a1b9a' }}>Program Design:</strong> Structured workouts for consistent progress.</li>
           </ul>
         </div>
 
         <section className="tools-section">
           <div className="tool-category">
-            <h4 style={{ fontSize: '1.3rem', color: '#E63946' }}>Training Methods</h4>
+            <h4 style={{ fontSize: '1.3rem', color: '#6a1b9a' }}>Training Methods</h4>
             <div style={{ 
               fontSize: '1.1em', 
               display: 'flex', 

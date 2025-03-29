@@ -1,4 +1,4 @@
-.wellness-focus-item {
+.nutrition-focus-item {
   transition: all 0.3s ease;
   cursor: pointer;
   padding: 0.75rem 1.25rem;
@@ -10,7 +10,7 @@
   font-size: 1.1rem;
 }
 
-.wellness-focus-item:hover {
+.nutrition-focus-item:hover {
   color: #6a1b9a;
   transform: translateY(-2px);
   border-color: #6a1b9a;

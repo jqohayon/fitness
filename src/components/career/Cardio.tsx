@@ -18,67 +18,37 @@ const Cardio: React.FC = () => {
   ];
 
   return (
-    <div className="doc-container">
-      <h2 style={{ color: '#FF6B6B' }}>Cardiovascular Training</h2>
-      <div style={{ textAlign: 'center', marginTop: '-15px', marginBottom: '15px' }}>
-        <GiHeartBeats 
-          style={{ 
-            fontSize: '2.5rem',
-            color: '#FF6B6B',
-            transition: 'all 0.3s ease'
-          }}
-        />
-        <p style={{
-          color: '#FF8B8B',
-          fontSize: '1.2rem',
-          marginTop: '8px',
-          marginBottom: '0',
-          fontStyle: 'italic'
-        }}>Elevate your endurance and heart health.</p>
-      </div>
-      <div className="content-section" style={{ background: 'rgba(255, 107, 107, 0.1)' }}>
-        <div className="emphasis-box" style={{ borderLeft: '4px solid #FF6B6B' }}>
-          <h4 style={{ fontSize: '1.3rem', color: '#FF6B6B' }}>Training Benefits</h4>
-          <ul style={{ color: '#FF8B8B' }}>
-            <li><strong style={{ color: '#FF6B6B' }}>Endurance:</strong> Build stamina and cardiovascular fitness.</li>
-            <li><strong style={{ color: '#FF6B6B' }}>Heart Health:</strong> Improve cardiovascular function and efficiency.</li>
-            <li><strong style={{ color: '#FF6B6B' }}>Fat Loss:</strong> Optimize calorie burn and metabolism.</li>
-            <li><strong style={{ color: '#FF6B6B' }}>Recovery:</strong> Active recovery and conditioning techniques.</li>
+    <div className="cardio-container">
+      <h2>Cardiovascular Training</h2>
+      <div className="cardio-divider" />
+      <GiHeartBeats className="cardio-icon" />
+      <p className="cardio-quote">Elevate your endurance and heart health.</p>
+      
+      <div className="content-grid">
+        <div className="content-card">
+          <h4>Training Benefits</h4>
+          <ul>
+            <li><strong>Endurance:</strong> Build stamina and cardiovascular fitness.</li>
+            <li><strong>Heart Health:</strong> Improve cardiovascular function and efficiency.</li>
+            <li><strong>Fat Loss:</strong> Optimize calorie burn and metabolism.</li>
+            <li><strong>Recovery:</strong> Active recovery and conditioning techniques.</li>
           </ul>
         </div>
 
-        <section className="tools-section">
-          <div className="tool-category">
-            <h4 style={{ fontSize: '1.3rem', color: '#FF6B6B' }}>Training Methods</h4>
-            <div style={{ 
-              fontSize: '1.1em', 
-              display: 'flex', 
-              gap: '1.5rem', 
-              justifyContent: 'center', 
-              flexWrap: 'wrap',
-              color: '#FF8B8B'
-            }}>
-              {trainingMethods.map((method) => (
-                <button
-                  key={method.path}
-                  className="cardio-focus-item"
-                  onClick={() => navigate(method.path)}
-                  style={{
-                    background: 'none',
-                    border: 'none',
-                    cursor: 'pointer',
-                    padding: '0.5rem 1rem',
-                    color: 'inherit',
-                    font: 'inherit',
-                    textAlign: 'center'
-                  }}
-                >
-                  {method.name}
-                </button>
-              ))}
-            </div>
+        <div className="content-card">
+          <h4>Training Methods</h4>
+          <div className="training-methods">
+            {trainingMethods.map((method) => (
+              <button
+                key={method.path}
+                className="cardio-focus-item"
+                onClick={() => navigate(method.path)}
+              >
+                {method.name}
+              </button>
+            ))}
           </div>
-        </section>
+        </div>
       </div>
     </div>
   );
