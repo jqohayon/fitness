@@ -18,7 +18,7 @@
 .strength-container h2 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
-  color: #E63946;
+  color: #6a1b9a;
   font-family: 'Poppins', sans-serif;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -26,13 +26,13 @@
 .strength-divider {
   width: 60%;
   height: 2px;
-  background: linear-gradient(to right, transparent, #E63946, transparent);
+  background: linear-gradient(to right, transparent, #6a1b9a, transparent);
   margin: 1rem auto;
 }
 
 .strength-icon {
   font-size: 3rem;
-  color: #E63946;
+  color: #6a1b9a;
   margin: 1rem 0;
   transition: transform 0.3s ease;
 }
@@ -43,7 +43,7 @@
 
 .strength-quote {
   font-style: italic;
-  color: #FF8B8B;
+  color: #9d6be7;
   font-size: 1.2rem;
   margin: 1rem 0 2rem;
   font-family: 'Poppins', sans-serif;
@@ -59,7 +59,7 @@
 }
 
 .content-card {
-  background: rgba(230, 57, 70, 0.1);
+  background: rgba(106, 27, 154, 0.1);
   border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -74,7 +74,7 @@
 }
 
 .content-card h4 {
-  color: #E63946;
+  color: #6a1b9a;
   font-size: 1.3rem;
   margin-bottom: 1rem;
   font-family: 'Poppins', sans-serif;
@@ -85,7 +85,7 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
-  color: #FF8B8B;
+  color: #9d6be7;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -95,7 +95,7 @@
 }
 
 .content-card ul li strong {
-  color: #E63946;
+  color: #6a1b9a;
   font-weight: 600;
 }
 
@@ -111,9 +111,9 @@
   cursor: pointer;
   padding: 0.75rem 1.25rem;
   border-radius: 8px;
-  background: rgba(230, 57, 70, 0.1);
+  background: rgba(106, 27, 154, 0.1);
   border: 2px solid transparent;
-  color: #FF8B8B;
+  color: #9d6be7;
   font-family: 'Poppins', sans-serif;
   font-size: 1.1rem;
   backdrop-filter: blur(4px);
@@ -121,11 +121,11 @@
 }
 
 .strength-focus-item:hover {
-  color: #E63946;
+  color: #6a1b9a;
   transform: translateY(-2px);
-  border-color: #E63946;
-  background: rgba(230, 57, 70, 0.15);
-  box-shadow: 0 4px 12px rgba(230, 57, 70, 0.2);
+  border-color: #6a1b9a;
+  background: rgba(106, 27, 154, 0.15);
+  box-shadow: 0 4px 12px rgba(106, 27, 154, 0.2);
 }
 
 /* Enhanced Mobile Responsiveness */
