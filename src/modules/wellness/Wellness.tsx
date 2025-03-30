@@ -4,6 +4,12 @@ import IceBath from './components/IceBath';
 import Sauna from './components/Sauna';
 import Massage from './components/Massage';
 import Stretching from './components/Stretching';
+import Meditation from './components/Meditation';
+import Breathing from './components/Breathing';
+import Yoga from './components/Yoga';
+import Recovery from './components/Recovery';
+import Sleep from './components/Sleep';
+import Balance from './components/Balance';
 import '../../GoogleDocViewer.css';
 import { FaSpa } from 'react-icons/fa';
 import './Wellness.css';
@@ -63,12 +69,12 @@ const Wellness: React.FC = () => {
         <Route path="sauna" element={<Sauna />} />
         <Route path="massage" element={<Massage />} />
         <Route path="stretching" element={<Stretching />} />
-        <Route path="meditation" element={<div>Meditation Page</div>} />
-        <Route path="breathing" element={<div>Breathing Page</div>} />
-        <Route path="yoga" element={<div>Yoga Page</div>} />
-        <Route path="recovery" element={<div>Recovery Page</div>} />
-        <Route path="sleep" element={<div>Sleep Page</div>} />
-        <Route path="balance" element={<div>Balance Page</div>} />
+        <Route path="meditation" element={<Meditation />} />
+        <Route path="breathing" element={<Breathing />} />
+        <Route path="yoga" element={<Yoga />} />
+        <Route path="recovery" element={<Recovery />} />
+        <Route path="sleep" element={<Sleep />} />
+        <Route path="balance" element={<Balance />} />
       </Routes>
     </div>
   );
