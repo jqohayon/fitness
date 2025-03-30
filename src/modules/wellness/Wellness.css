@@ -15,4 +15,72 @@
   transform: translateY(-2px);
   border-color: #6a1b9a;
   background: rgba(106, 27, 154, 0.15);
+}
+
+.wellness-container {
+  padding: 2rem;
+  min-height: 100vh;
+  background: rgba(20, 17, 35, 0.7);
+}
+
+.wellness-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.wellness-content h2 {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.focus-areas {
+  background: rgba(106, 27, 154, 0.1);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.focus-areas h3 {
+  color: #6a1b9a;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.focus-areas ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.focus-areas li {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(106, 27, 154, 0.05);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.focus-areas li:hover {
+  background: rgba(106, 27, 154, 0.1);
+  transform: translateX(5px);
+}
+
+.focus-areas a {
+  color: #9d6be7;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.focus-areas a:hover {
+  color: #6a1b9a;
+}
+
+.focus-areas .description {
+  color: #9d6be7;
+  font-size: 0.9rem;
+  display: block;
+  margin-top: 0.5rem;
 } 
