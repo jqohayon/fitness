@@ -83,22 +83,21 @@
 }
 
 .wellness-focus-item {
-  background: rgba(106, 27, 154, 0.05);
-  color: #9d6be7;
-  padding: 0.75rem 1.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  padding: 5px 10px;
   border-radius: 4px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(106, 27, 154, 0.2);
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.1rem;
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  text-align: center;
 }
 
 .wellness-focus-item:hover {
-  background: rgba(106, 27, 154, 0.1);
   color: #6a1b9a;
   transform: translateY(-2px);
-  border-color: #6a1b9a;
+  background: rgba(106, 27, 154, 0.1);
 }
 
 .wellness-container {
