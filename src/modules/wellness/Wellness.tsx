@@ -10,38 +10,55 @@ import './Wellness.css';
 
 const Wellness: React.FC = () => {
   return (
-    <div className="wellness-container">
+    <div className="doc-container">
+      <h2>🌿 Wellness</h2>
+      <div style={{ textAlign: 'center', marginTop: '-15px', marginBottom: '15px' }}>
+        <FaSpa 
+          style={{ 
+            fontSize: '2.5rem',
+            color: '#ffffff',
+            transition: 'all 0.3s ease'
+          }}
+        />
+        <p style={{
+          color: '#ffffff',
+          fontSize: '1.2rem',
+          marginTop: '8px',
+          marginBottom: '0',
+          fontStyle: 'italic'
+        }}>Mind, body, and spirit in harmony.</p>
+      </div>
+
       <Routes>
-        <Route path="/" element={
-          <div className="wellness-content">
-            <h2>Wellness</h2>
-            <div className="focus-areas">
-              <h3>Focus Areas</h3>
+        <Route index element={
+          <div className="content-section">
+            <div className="emphasis-box">
+              <h4>Overview</h4>
               <ul>
-                <li>
-                  <Link to="/wellness/ice-bath">Ice Bath</Link>
-                  <span className="description">Cold therapy for recovery and health benefits</span>
-                </li>
-                <li>
-                  <Link to="/wellness/sauna">Sauna</Link>
-                  <span className="description">Heat therapy for health and recovery</span>
-                </li>
-                <li>
-                  <Link to="/wellness/massage">Massage</Link>
-                  <span className="description">Therapeutic massage for recovery and wellness</span>
-                </li>
-                <li>
-                  <Link to="/wellness/stretching">Stretching</Link>
-                  <span className="description">Flexibility and mobility training</span>
-                </li>
+                <li><strong>Mental Clarity:</strong> Practice mindfulness and meditation for improved focus and reduced stress.</li>
+                <li><strong>Recovery:</strong> Learn proper rest and recovery techniques for optimal performance.</li>
+                <li><strong>Sleep Quality:</strong> Develop healthy sleep habits for better recovery and energy levels.</li>
+                <li><strong>Stress Management:</strong> Implement strategies to balance fitness goals with overall wellbeing.</li>
               </ul>
             </div>
+
+            <section className="tools-section">
+              <div className="tool-category">
+                <h4>Focus Areas</h4>
+                <div className="focus-areas">
+                  <Link to="ice-bath" className="wellness-focus-item">Ice Bath</Link>
+                  <Link to="sauna" className="wellness-focus-item">Sauna</Link>
+                  <Link to="massage" className="wellness-focus-item">Massage</Link>
+                  <Link to="stretching" className="wellness-focus-item">Stretching</Link>
+                </div>
+              </div>
+            </section>
           </div>
         } />
-        <Route path="/ice-bath" element={<IceBath />} />
-        <Route path="/sauna" element={<Sauna />} />
-        <Route path="/massage" element={<Massage />} />
-        <Route path="/stretching" element={<Stretching />} />
+        <Route path="ice-bath" element={<IceBath />} />
+        <Route path="sauna" element={<Sauna />} />
+        <Route path="massage" element={<Massage />} />
+        <Route path="stretching" element={<Stretching />} />
       </Routes>
     </div>
   );
