@@ -24,6 +24,18 @@ import { Goals } from './modules/goals';
 import { Resources } from './modules/resources';
 import Contributions from './components/career/Contributions';
 
+// Import Wellness components
+import IceBath from './modules/wellness/components/IceBath';
+import Sauna from './modules/wellness/components/Sauna';
+import Massage from './modules/wellness/components/Massage';
+import Stretching from './modules/wellness/components/Stretching';
+import Meditation from './modules/wellness/components/Meditation';
+import Breathing from './modules/wellness/components/Breathing';
+import Yoga from './modules/wellness/components/Yoga';
+import Recovery from './modules/wellness/components/Recovery';
+import Sleep from './modules/wellness/components/Sleep';
+import Balance from './modules/wellness/components/Balance';
+
 const App: React.FC = () => {
   return (
     <div className="app">
@@ -48,6 +60,18 @@ const App: React.FC = () => {
           <Route path="/strength/olympic-lifting" element={<OlympicLifting />} />
           <Route path="/strength/machines" element={<Machines />} />
           <Route path="/strength/circuit-training" element={<CircuitTraining />} />
+
+          {/* Wellness Routes */}
+          <Route path="/wellness/ice-bath" element={<IceBath />} />
+          <Route path="/wellness/sauna" element={<Sauna />} />
+          <Route path="/wellness/massage" element={<Massage />} />
+          <Route path="/wellness/stretching" element={<Stretching />} />
+          <Route path="/wellness/meditation" element={<Meditation />} />
+          <Route path="/wellness/breathing" element={<Breathing />} />
+          <Route path="/wellness/yoga" element={<Yoga />} />
+          <Route path="/wellness/recovery" element={<Recovery />} />
+          <Route path="/wellness/sleep" element={<Sleep />} />
+          <Route path="/wellness/balance" element={<Balance />} />
           
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
