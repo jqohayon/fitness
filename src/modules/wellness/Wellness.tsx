@@ -11,7 +11,7 @@ import './Wellness.css';
 const Wellness: React.FC = () => {
   return (
     <div className="doc-container">
-      <h2>🌿 Wellness</h2>
+      <h2>Wellness</h2>
       <div style={{ textAlign: 'center', marginTop: '-15px', marginBottom: '15px' }}>
         <FaSpa 
           style={{ 
@@ -46,10 +46,14 @@ const Wellness: React.FC = () => {
               <div className="tool-category">
                 <h4>Focus Areas</h4>
                 <div className="focus-areas">
+                  <Link to="meditation" className="wellness-focus-item">Meditation</Link>
                   <Link to="ice-bath" className="wellness-focus-item">Ice Bath</Link>
-                  <Link to="sauna" className="wellness-focus-item">Sauna</Link>
+                  <Link to="breathing" className="wellness-focus-item">Breathing</Link>
+                  <Link to="yoga" className="wellness-focus-item">Yoga</Link>
                   <Link to="massage" className="wellness-focus-item">Massage</Link>
-                  <Link to="stretching" className="wellness-focus-item">Stretching</Link>
+                  <Link to="recovery" className="wellness-focus-item">Recovery</Link>
+                  <Link to="sleep" className="wellness-focus-item">Sleep</Link>
+                  <Link to="balance" className="wellness-focus-item">Balance</Link>
                 </div>
               </div>
             </section>
@@ -59,6 +63,12 @@ const Wellness: React.FC = () => {
         <Route path="sauna" element={<Sauna />} />
         <Route path="massage" element={<Massage />} />
         <Route path="stretching" element={<Stretching />} />
+        <Route path="meditation" element={<div>Meditation Page</div>} />
+        <Route path="breathing" element={<div>Breathing Page</div>} />
+        <Route path="yoga" element={<div>Yoga Page</div>} />
+        <Route path="recovery" element={<div>Recovery Page</div>} />
+        <Route path="sleep" element={<div>Sleep Page</div>} />
+        <Route path="balance" element={<div>Balance Page</div>} />
       </Routes>
     </div>
   );
