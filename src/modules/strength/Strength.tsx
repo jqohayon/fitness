@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import '../../GoogleDocViewer.css';
 import { GiWeightLiftingUp } from 'react-icons/gi';
 import './Strength.css';
+import Calisthenics from './components/Calisthenics';
 
 const Strength: React.FC = () => {
   const navigate = useNavigate();
