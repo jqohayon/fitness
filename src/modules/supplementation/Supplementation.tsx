@@ -68,8 +68,8 @@ const Supplementation: React.FC = () => {
           </div>
         </div>
       } />
-      <Route path="/protein" element={<Protein />} />
-      <Route path="/creatine" element={<Creatine />} />
+      <Route path="/supplementation/protein" element={<Protein />} />
+      <Route path="/supplementation/creatine" element={<Creatine />} />
       {/* Add more routes as we create more components */}
     </Routes>
   );

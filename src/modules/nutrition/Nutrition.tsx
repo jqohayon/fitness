@@ -57,8 +57,8 @@ const Nutrition: React.FC = () => {
           </div>
         </div>
       } />
-      <Route path="/proteins" element={<Proteins />} />
-      <Route path="/carbs" element={<Carbs />} />
+      <Route path="/nutrition/proteins" element={<Proteins />} />
+      <Route path="/nutrition/carbs" element={<Carbs />} />
       {/* Add more routes as we create more components */}
     </Routes>
   );
