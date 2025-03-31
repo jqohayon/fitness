@@ -18,8 +18,6 @@ const Supplementation: React.FC = () => {
     { name: 'Creatine', path: '/supplementation/creatine' },
     { name: 'BCAAs', path: '/supplementation/bcaas' },
     { name: 'Pre-Workout', path: '/supplementation/pre-workout' },
-    { name: 'Vitamins', path: '/supplementation/vitamins' },
-    { name: 'Minerals', path: '/supplementation/minerals' },
     { name: 'Amino Acids', path: '/supplementation/amino-acids' },
     { name: 'Herbs', path: '/supplementation/herbs' }
   ];
@@ -41,53 +39,46 @@ const Supplementation: React.FC = () => {
           marginTop: '8px',
           marginBottom: '0',
           fontStyle: 'italic'
-        }}>Enhance your performance safely and effectively.</p>
+        }}>Enhance your performance with strategic supplementation.</p>
       </div>
       <div className="content-section" style={{ background: 'rgba(106, 27, 154, 0.1)' }}>
         <div className="emphasis-box" style={{ borderLeft: '4px solid #6a1b9a' }}>
           <h4 style={{ fontSize: '1.3rem', color: '#6a1b9a' }}>Key Supplements</h4>
           <ul style={{ color: '#9d6be7' }}>
-            <li><strong style={{ color: '#6a1b9a' }}>Protein:</strong> Essential for muscle repair and growth.</li>
+            <li><strong style={{ color: '#6a1b9a' }}>Protein:</strong> Essential for muscle growth and recovery.</li>
             <li><strong style={{ color: '#6a1b9a' }}>Creatine:</strong> Improves strength and power output.</li>
-            <li><strong style={{ color: '#6a1b9a' }}>BCAAs:</strong> Supports muscle recovery and reduces fatigue.</li>
-            <li><strong style={{ color: '#6a1b9a' }}>Pre-Workout:</strong> Enhances energy and focus during training.</li>
-            <li><strong style={{ color: '#6a1b9a' }}>Multivitamins:</strong> Ensures optimal nutrient intake.</li>
-            <li><strong style={{ color: '#6a1b9a' }}>Omega-3:</strong> Supports joint health and recovery.</li>
+            <li><strong style={{ color: '#6a1b9a' }}>BCAAs:</strong> Supports muscle preservation and recovery.</li>
+            <li><strong style={{ color: '#6a1b9a' }}>Pre-Workout:</strong> Enhances energy and focus.</li>
+            <li><strong style={{ color: '#6a1b9a' }}>Amino Acids:</strong> Supports various bodily functions.</li>
+            <li><strong style={{ color: '#6a1b9a' }}>Herbs:</strong> Natural supplements for health and performance.</li>
           </ul>
         </div>
 
-        <section className="tools-section">
-          <div className="tool-category">
-            <h4 style={{ fontSize: '1.3rem', color: '#6a1b9a' }}>Supplement Categories</h4>
-            <div style={{ 
-              fontSize: '1.1em', 
-              display: 'flex', 
-              gap: '1.5rem', 
-              justifyContent: 'center', 
-              flexWrap: 'wrap',
-              color: '#9d6be7'
-            }}>
-              {supplements.map((supplement) => (
-                <button
-                  key={supplement.path}
-                  className="supplement-focus-item"
-                  onClick={() => navigate(supplement.path)}
-                  style={{
-                    background: 'none',
-                    border: 'none',
-                    cursor: 'pointer',
-                    padding: '0.5rem 1rem',
-                    color: 'inherit',
-                    font: 'inherit',
-                    textAlign: 'center'
-                  }}
-                >
-                  {supplement.name}
-                </button>
-              ))}
-            </div>
+        <div className="emphasis-box" style={{ borderLeft: '4px solid #6a1b9a' }}>
+          <h4 style={{ fontSize: '1.3rem', color: '#6a1b9a' }}>Supplement Categories</h4>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+            {supplements.map((supplement) => (
+              <button
+                key={supplement.name}
+                onClick={() => navigate(supplement.path)}
+                style={{
+                  padding: '10px 20px',
+                  backgroundColor: '#6a1b9a',
+                  color: 'white',
+                  border: 'none',
+                  borderRadius: '5px',
+                  cursor: 'pointer',
+                  transition: 'all 0.3s ease',
+                  fontSize: '1rem'
+                }}
+                onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#9d6be7'}
+                onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#6a1b9a'}
+              >
+                {supplement.name}
+              </button>
+            ))}
           </div>
-        </section>
+        </div>
       </div>
     </div>
   );

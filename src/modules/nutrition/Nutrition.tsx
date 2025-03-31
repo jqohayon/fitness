@@ -5,6 +5,12 @@ import { Routes, Route, Link } from 'react-router-dom';
 import './Nutrition.css';
 import Proteins from './components/Proteins';
 import Carbs from './components/Carbs';
+import Fats from './components/Fats';
+import Hydration from './components/Hydration';
+import Vitamins from './components/Vitamins';
+import Minerals from './components/Minerals';
+import Timing from './components/Timing';
+import Planning from './components/Planning';
 
 const Nutrition: React.FC = () => {
   return (
@@ -59,7 +65,12 @@ const Nutrition: React.FC = () => {
       } />
       <Route path="/nutrition/proteins" element={<Proteins />} />
       <Route path="/nutrition/carbs" element={<Carbs />} />
-      {/* Add more routes as we create more components */}
+      <Route path="/nutrition/fats" element={<Fats />} />
+      <Route path="/nutrition/hydration" element={<Hydration />} />
+      <Route path="/nutrition/vitamins" element={<Vitamins />} />
+      <Route path="/nutrition/minerals" element={<Minerals />} />
+      <Route path="/nutrition/timing" element={<Timing />} />
+      <Route path="/nutrition/planning" element={<Planning />} />
     </Routes>
   );
 };

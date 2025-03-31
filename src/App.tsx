@@ -39,10 +39,20 @@ import Balance from './modules/wellness/components/Balance';
 // Import Supplementation components
 import Protein from './modules/supplementation/components/Protein';
 import Creatine from './modules/supplementation/components/Creatine';
+import BCAAs from './modules/supplementation/components/BCAAs';
+import PreWorkout from './modules/supplementation/components/PreWorkout';
+import AminoAcids from './modules/supplementation/components/AminoAcids';
+import Herbs from './modules/supplementation/components/Herbs';
 
 // Import Nutrition components
 import Proteins from './modules/nutrition/components/Proteins';
 import Carbs from './modules/nutrition/components/Carbs';
+import Vitamins from './modules/nutrition/components/Vitamins';
+import Minerals from './modules/nutrition/components/Minerals';
+import Timing from './modules/nutrition/components/Timing';
+import Planning from './modules/nutrition/components/Planning';
+import Fats from './modules/nutrition/components/Fats';
+import Hydration from './modules/nutrition/components/Hydration';
 
 const App: React.FC = () => {
   return (
@@ -84,10 +94,20 @@ const App: React.FC = () => {
           {/* Supplementation Routes */}
           <Route path="/supplementation/protein" element={<Protein />} />
           <Route path="/supplementation/creatine" element={<Creatine />} />
+          <Route path="/supplementation/bcaas" element={<BCAAs />} />
+          <Route path="/supplementation/pre-workout" element={<PreWorkout />} />
+          <Route path="/supplementation/amino-acids" element={<AminoAcids />} />
+          <Route path="/supplementation/herbs" element={<Herbs />} />
 
           {/* Nutrition Routes */}
           <Route path="/nutrition/proteins" element={<Proteins />} />
           <Route path="/nutrition/carbs" element={<Carbs />} />
+          <Route path="/nutrition/fats" element={<Fats />} />
+          <Route path="/nutrition/hydration" element={<Hydration />} />
+          <Route path="/nutrition/vitamins" element={<Vitamins />} />
+          <Route path="/nutrition/minerals" element={<Minerals />} />
+          <Route path="/nutrition/timing" element={<Timing />} />
+          <Route path="/nutrition/planning" element={<Planning />} />
           
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
