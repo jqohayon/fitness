@@ -2,115 +2,12 @@ import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import '../../GoogleDocViewer.css';
 import { FaCapsules } from 'react-icons/fa';
-import { Routes, Route, Link } from 'react-router-dom';
 import './Supplementation.css';
 import Protein from './components/Protein';
 import Creatine from './components/Creatine';
 
 const Supplementation: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="doc-container">
-<<<<<<< HEAD
-      <h2>Supplementation</h2>
-=======
-      <h2 style={{ color: '#6a1b9a' }}>Supplementation</h2>
->>>>>>> main
-      <div style={{ textAlign: 'center', marginTop: '-15px', marginBottom: '15px' }}>
-        <FaCapsules 
-          style={{ 
-            fontSize: '2.5rem',
-<<<<<<< HEAD
-            color: '#ffffff',
-=======
-            color: '#6a1b9a',
->>>>>>> main
-            transition: 'all 0.3s ease'
-          }}
-        />
-        <p style={{
-<<<<<<< HEAD
-          color: '#ffffff',
-=======
-          color: '#9d6be7',
->>>>>>> main
-          fontSize: '1.2rem',
-          marginTop: '8px',
-          marginBottom: '0',
-          fontStyle: 'italic'
-        }}>Enhance your fitness journey with proper supplementation.</p>
-      </div>
-<<<<<<< HEAD
-      <div className="content-section">
-        <div className="emphasis-box">
-          <h4>Essential Supplements</h4>
-          <ul>
-            <li><strong>Protein:</strong> Build and repair muscle tissue</li>
-            <li><strong>Creatine:</strong> Improve strength and power output</li>
-            <li><strong>BCAAs:</strong> Support muscle recovery and growth</li>
-            <li><strong>Multivitamins:</strong> Ensure optimal nutrient intake</li>
-          </ul>
-        </div>
-        <div className="emphasis-box">
-          <h4>Timing Guidelines</h4>
-          <ul>
-            <li>Pre-workout: 30-60 minutes before exercise</li>
-            <li>Post-workout: Within 30 minutes after exercise</li>
-            <li>Daily: With meals for better absorption</li>
-            <li>Rest days: Maintain consistent schedule</li>
-          </ul>
-        </div>
-        <div className="emphasis-box">
-          <h4>Safety Considerations</h4>
-          <ul>
-            <li>Consult healthcare provider before starting</li>
-            <li>Follow recommended dosages</li>
-            <li>Stay hydrated</li>
-            <li>Monitor for any adverse effects</li>
-          </ul>
-        </div>
-=======
-      <div className="content-section" style={{ background: 'rgba(106, 27, 154, 0.1)' }}>
-        <div className="emphasis-box" style={{ borderLeft: '4px solid #6a1b9a' }}>
-          <h4 style={{ fontSize: '1.3rem', color: '#6a1b9a' }}>Key Supplements</h4>
-          <ul style={{ color: '#9d6be7' }}>
-            <li><strong style={{ color: '#6a1b9a' }}>Protein:</strong> Essential for muscle repair and growth.</li>
-            <li><strong style={{ color: '#6a1b9a' }}>Creatine:</strong> Improves strength and power output.</li>
-            <li><strong style={{ color: '#6a1b9a' }}>BCAAs:</strong> Supports muscle recovery and reduces fatigue.</li>
-            <li><strong style={{ color: '#6a1b9a' }}>Pre-Workout:</strong> Enhances energy and focus during training.</li>
-            <li><strong style={{ color: '#6a1b9a' }}>Multivitamins:</strong> Ensures optimal nutrient intake.</li>
-            <li><strong style={{ color: '#6a1b9a' }}>Omega-3:</strong> Supports joint health and recovery.</li>
-          </ul>
-        </div>
-
-        <section className="tools-section">
-          <div className="tool-category">
-            <h4 style={{ fontSize: '1.3rem', color: '#6a1b9a' }}>Supplement Categories</h4>
-            <div style={{ 
-              fontSize: '1.1em', 
-              display: 'flex', 
-              gap: '1.5rem', 
-              justifyContent: 'center', 
-              flexWrap: 'wrap',
-              color: '#9d6be7'
-            }}>
-              <div style={{ width: '100%', display: 'flex', justifyContent: 'center', gap: '1.5rem', marginBottom: '0.5rem' }}>
-                <span className="supplement-focus-item">Protein</span>
-                <span className="supplement-focus-item">Creatine</span>
-                <span className="supplement-focus-item">BCAAs</span>
-                <span className="supplement-focus-item">Pre-Workout</span>
-              </div>
-              <span className="supplement-focus-item">Vitamins</span>
-              <span className="supplement-focus-item">Minerals</span>
-              <span className="supplement-focus-item">Amino Acids</span>
-              <span className="supplement-focus-item">Herbs</span>
-            </div>
-          </div>
-        </section>
->>>>>>> main
-      </div>
-    </div>
-=======
     <Routes>
       <Route path="/" element={
         <div className="doc-container">
@@ -171,11 +68,10 @@ const Supplementation: React.FC = () => {
           </div>
         </div>
       } />
-      <Route path="/protein" element={<Protein />} />
-      <Route path="/creatine" element={<Creatine />} />
+      <Route path="/supplementation/protein" element={<Protein />} />
+      <Route path="/supplementation/creatine" element={<Creatine />} />
       {/* Add more routes as we create more components */}
     </Routes>
->>>>>>> main
   );
 };
 
