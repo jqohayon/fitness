@@ -1,0 +1,61 @@
+.doc-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #ffffff;
+}
+
+.content-section {
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.emphasis-box {
+  background: rgba(106, 27, 154, 0.05);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.emphasis-box h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.emphasis-box ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.emphasis-box li {
+  margin-bottom: 10px;
+}
+
+.emphasis-box li:last-child {
+  margin-bottom: 0;
+}
+
+.tools-section {
+  margin-top: 30px;
+}
+
+.tool-category {
+  background: rgba(106, 27, 154, 0.05);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.nutrition-focus-item {
+  color: #9d6be7;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  background: rgba(106, 27, 154, 0.1);
+}
+
+.nutrition-focus-item:hover {
+  background: rgba(106, 27, 154, 0.2);
+  transform: translateY(-2px);
+} 
