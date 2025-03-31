@@ -49,28 +49,28 @@ const Nutrition: React.FC = () => {
               <div className="tool-category">
                 <h4 style={{ fontSize: '1.3rem' }}>Key Components</h4>
                 <div style={{ color: '#9d6be7', fontSize: '1.1em', display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-                  <Link to="/nutrition/proteins" className="nutrition-focus-item">Proteins</Link>
-                  <Link to="/nutrition/carbs" className="nutrition-focus-item">Carbs</Link>
-                  <Link to="/nutrition/fats" className="nutrition-focus-item">Fats</Link>
-                  <Link to="/nutrition/hydration" className="nutrition-focus-item">Hydration</Link>
-                  <Link to="/nutrition/vitamins" className="nutrition-focus-item">Vitamins</Link>
-                  <Link to="/nutrition/minerals" className="nutrition-focus-item">Minerals</Link>
-                  <Link to="/nutrition/timing" className="nutrition-focus-item">Timing</Link>
-                  <Link to="/nutrition/planning" className="nutrition-focus-item">Planning</Link>
+                  <Link to="proteins" className="nutrition-focus-item">Proteins</Link>
+                  <Link to="carbs" className="nutrition-focus-item">Carbs</Link>
+                  <Link to="fats" className="nutrition-focus-item">Fats</Link>
+                  <Link to="hydration" className="nutrition-focus-item">Hydration</Link>
+                  <Link to="vitamins" className="nutrition-focus-item">Vitamins</Link>
+                  <Link to="minerals" className="nutrition-focus-item">Minerals</Link>
+                  <Link to="timing" className="nutrition-focus-item">Timing</Link>
+                  <Link to="planning" className="nutrition-focus-item">Planning</Link>
                 </div>
               </div>
             </section>
           </div>
         </div>
       } />
-      <Route path="/nutrition/proteins" element={<Proteins />} />
-      <Route path="/nutrition/carbs" element={<Carbs />} />
-      <Route path="/nutrition/fats" element={<Fats />} />
-      <Route path="/nutrition/hydration" element={<Hydration />} />
-      <Route path="/nutrition/vitamins" element={<Vitamins />} />
-      <Route path="/nutrition/minerals" element={<Minerals />} />
-      <Route path="/nutrition/timing" element={<Timing />} />
-      <Route path="/nutrition/planning" element={<Planning />} />
+      <Route path="proteins" element={<Proteins />} />
+      <Route path="carbs" element={<Carbs />} />
+      <Route path="fats" element={<Fats />} />
+      <Route path="hydration" element={<Hydration />} />
+      <Route path="vitamins" element={<Vitamins />} />
+      <Route path="minerals" element={<Minerals />} />
+      <Route path="timing" element={<Timing />} />
+      <Route path="planning" element={<Planning />} />
     </Routes>
   );
 };

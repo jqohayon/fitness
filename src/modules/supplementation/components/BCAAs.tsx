@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../../../GoogleDocViewer.css';
-import { FaDumbbell } from 'react-icons/fa';
+import '../../../GoogleDocViewer.css';
+import { FaFlask } from 'react-icons/fa';
 import './Supplementation.css';
 
 const BCAAs: React.FC = () => {
@@ -8,7 +8,7 @@ const BCAAs: React.FC = () => {
     <div className="doc-container">
       <h2 style={{ color: '#6a1b9a' }}>BCAAs (Branched-Chain Amino Acids)</h2>
       <div style={{ textAlign: 'center', marginTop: '-15px', marginBottom: '15px' }}>
-        <FaDumbbell 
+        <FaFlask 
           style={{ 
             fontSize: '2.5rem',
             color: '#6a1b9a',

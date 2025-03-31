@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../../GoogleDocViewer.css';
+import '../../../GoogleDocViewer.css';
 import { FaLeaf } from 'react-icons/fa';
 import './Supplementation.css';
 
