@@ -1,7 +1,7 @@
 import React from 'react';
-import '../../../../GoogleDocViewer.css';
+import '../../../GoogleDocViewer.css';
 import { FaGem } from 'react-icons/fa';
-import './Nutrition.css';
+import '../Nutrition.css';
 
 const Minerals: React.FC = () => {
   return (
