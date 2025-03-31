@@ -1,7 +1,7 @@
 import React from 'react';
-import '../../../../GoogleDocViewer.css';
+import '../../../GoogleDocViewer.css';
 import { FaClock } from 'react-icons/fa';
-import './Nutrition.css';
+import '../Nutrition.css';
 
 const Timing: React.FC = () => {
   return (

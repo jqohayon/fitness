@@ -1,9 +1,9 @@
 {
-  "name": "react-quirky-clubhouse",
+  "name": "fitness-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://jqohayon.github.io/jacqstack/",
+  "homepage": "https://jqohayon.github.io/fitness/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
