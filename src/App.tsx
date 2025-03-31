@@ -36,6 +36,14 @@ import Recovery from './modules/wellness/components/Recovery';
 import Sleep from './modules/wellness/components/Sleep';
 import Balance from './modules/wellness/components/Balance';
 
+// Import Supplementation components
+import Protein from './modules/supplementation/components/Protein';
+import Creatine from './modules/supplementation/components/Creatine';
+
+// Import Nutrition components
+import Proteins from './modules/nutrition/components/Proteins';
+import Carbs from './modules/nutrition/components/Carbs';
+
 const App: React.FC = () => {
   return (
     <div className="app">
@@ -72,6 +80,14 @@ const App: React.FC = () => {
           <Route path="/wellness/recovery" element={<Recovery />} />
           <Route path="/wellness/sleep" element={<Sleep />} />
           <Route path="/wellness/balance" element={<Balance />} />
+
+          {/* Supplementation Routes */}
+          <Route path="/supplementation/protein" element={<Protein />} />
+          <Route path="/supplementation/creatine" element={<Creatine />} />
+
+          {/* Nutrition Routes */}
+          <Route path="/nutrition/proteins" element={<Proteins />} />
+          <Route path="/nutrition/carbs" element={<Carbs />} />
           
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
