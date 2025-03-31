@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Routes, Route, Link } from 'react-router-dom';
-=======
 import { useNavigate } from 'react-router-dom';
->>>>>>> main
 import '../../GoogleDocViewer.css';
 import { FaCapsules } from 'react-icons/fa';
 import './Supplementation.css';
