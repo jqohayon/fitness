@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../../../src/GoogleDocViewer.css';
 import { FaOilCan } from 'react-icons/fa';
-import './Supplementation.css';
+import '../Nutrition.css';
 
 const Fats: React.FC = () => {
   return (
