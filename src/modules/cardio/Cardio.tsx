@@ -31,7 +31,7 @@ const Cardio: React.FC = () => {
         <GiHeartBeats 
           style={{ 
             fontSize: '2.5rem',
-            color: '#ffffff',
+            color: '#6a1b9a',
             transition: 'all 0.3s ease'
           }}
         />

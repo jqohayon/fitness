@@ -22,7 +22,7 @@ const Wellness: React.FC = () => {
         <FaSpa 
           style={{ 
             fontSize: '2.5rem',
-            color: '#ffffff',
+            color: '#6a1b9a',
             transition: 'all 0.3s ease'
           }}
         />

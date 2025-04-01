@@ -20,7 +20,7 @@ const Supplementation: React.FC = () => {
 
   return (
     <div className="doc-container">
-      <h2 style={{ color: '#6a1b9a' }}>Supplementation</h2>
+      <h2>Supplementation</h2>
       <div style={{ textAlign: 'center', marginTop: '-15px', marginBottom: '15px' }}>
         <FaCapsules 
           style={{ 
@@ -30,7 +30,7 @@ const Supplementation: React.FC = () => {
           }}
         />
         <p style={{
-          color: '#9d6be7',
+          color: '#ffffff',
           fontSize: '1.2rem',
           marginTop: '8px',
           marginBottom: '0',
